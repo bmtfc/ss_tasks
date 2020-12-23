@@ -38,6 +38,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -66,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608679776959</updated>
-      <workItem from="1608679778438" duration="1473000" />
+      <workItem from="1608679778438" duration="1982000" />
     </task>
     <servers />
   </component>
@@ -74,52 +80,41 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1608681253968">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1608681702486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608681253968" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608681702486" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.25.1440.825@0.25.1440.825" timestamp="1608681049874" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1608681253966">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1608681702485">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608681253966" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608681702485" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.25.1440.825@0.25.1440.825" timestamp="1608681049866" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1608681253965">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1608681702485">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608681253965" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608681702485" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.25.1440.825@0.25.1440.825" timestamp="1608681049864" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1608681253967">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1608681702486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608681253967" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608681702486" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.25.1440.825@0.25.1440.825" timestamp="1608681049867" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1608681118014">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1608681488871">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608681118014" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1608681118012">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608681488871" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1608681488870">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1608681118012" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1608681118011">
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1608681488870" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1608681488869">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1608681118011" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1608681118013">
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1608681488869" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1608681488870">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1608681118013" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>47</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1608681488870" />
   </component>
 </project>

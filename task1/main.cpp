@@ -53,6 +53,10 @@ void StringListDestroy(char ***list) {
     *list = nullptr;
 }
 
+int StringListSize(char **list) {
+    return (atoi(list[0]));
+}
+
 int main() {
 
     char **list;
@@ -63,6 +67,7 @@ int main() {
     StringListAdd(&list, "ghgh");
     StringListAdd(&list, "ghgh");
     PrintList(&list);
+    printf("size of the list : %d", StringListSize(list));
     StringListDestroy(&list);
 
     return 0;
