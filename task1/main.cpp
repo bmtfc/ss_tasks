@@ -2,16 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-// init
-// delete
-//add
-//remove
-// number of items
-// first match of string
-
-// snprintf() and atoi()
-
-void StringListInit(char ***list) {
+void StringListInit(char ***list)
+{
     char **t_list = (char **) malloc(1 * sizeof(char *));
     t_list[0] = (char *) malloc(128 * sizeof(char));
     char buf[128];
@@ -20,54 +12,77 @@ void StringListInit(char ***list) {
     *list = t_list;
 }
 
-void StringListAdd(char ***list, char *str) {
-    int a = atoi(*list[0]) + 1;
+void StringListAdd(char ***list, char *str)
+{
+    int list_size = atoi(*list[0]) + 1;
     char **temp;
     temp = *list;
     int n = strlen(str);
-    temp = (char **) realloc(temp, (a + 1) * sizeof(*temp));
-    temp[a] = (char *) malloc((n + 1) * sizeof(char));
+    temp = (char **) realloc(temp, (list_size + 1) * sizeof(*temp));
+    temp[list_size] = (char *) malloc((n + 1) * sizeof(char));
     int i;
-    for (i = 0; i < n; ++i) {
-        temp[a][i] = str[i];
+    for (i = 0; i < n; ++i)
+    {
+        temp[list_size][i] = str[i];
     }
-    temp[a][i] = '\0';
+    temp[list_size][i] = '\0';
     char buf[128];
-    snprintf(buf, sizeof(buf), "%d", a);
+    snprintf(buf, sizeof(buf), "%d", list_size);
     temp[0] = buf;
     *list = temp;
 }
 
-void PrintList(char ***list) {
+void PrintList(char ***list)
+{
     int num_of_str = atoi(*list[0]) + 1;
     for (int i = 1; i < num_of_str; ++i)
+    {
         printf("%s\n", (*list)[i]);
+    }
 }
 
-void StringListDestroy(char ***list) {
-    int a = atoi(*list[0]) + 1;
-    for (int i = 1; i < a; ++i) {
+void StringListDestroy(char ***list)
+{
+    int list_size = atoi(*list[0]) + 1;
+    for (int i = 1; i < list_size; ++i)
+    {
         free((*list)[i]);
     }
     free(*list);
     *list = nullptr;
 }
 
-int StringListSize(char **list) {
+int StringListSize(char **list)
+{
     return (atoi(list[0]));
 }
 
-int main() {
+int StringListIndexOf(char **list, char *str)
+{
+    int list_size = atoi(list[0]) + 1;
+    for (int i = 1; i < list_size; i++)
+    {
+        if (strcmp(list[i], str) == 0)
+        {
+            return (i);
+        }
+    }
+    return (-1);
+}
+
+int main()
+{
 
     char **list;
     StringListInit(&list);
     StringListAdd(&list, "ghgh");
     StringListAdd(&list, "ghgh");
-    StringListAdd(&list, "ghgh");
+    StringListAdd(&list, "hhgh");
     StringListAdd(&list, "ghgh");
     StringListAdd(&list, "ghgh");
     PrintList(&list);
-    printf("size of the list : %d", StringListSize(list));
+    printf("size of the list : %d\n", StringListSize(list));
+    printf("index of the hhgh in list : %d", StringListIndexOf(list, "hhgh"));
     StringListDestroy(&list);
 
     return 0;
