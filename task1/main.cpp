@@ -2,11 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define MAX_COUNT_OF_DIGITS_IN_INT 128
+
 void StringListInit(char ***list)
 {
     char **t_list = (char **) malloc(1 * sizeof(char *));
-    t_list[0] = (char *) malloc(128 * sizeof(char));
-    char buf[128];
+    t_list[0] = (char *) malloc(MAX_COUNT_OF_DIGITS_IN_INT * sizeof(char));
+    char buf[MAX_COUNT_OF_DIGITS_IN_INT];
     snprintf(buf, sizeof(buf), "%d", 0);
     t_list[0] = buf;
     *list = t_list;
@@ -26,7 +28,7 @@ void StringListAdd(char ***list, char *str)
         temp[list_size][i] = str[i];
     }
     temp[list_size][i] = '\0';
-    char buf[128];
+    char buf[MAX_COUNT_OF_DIGITS_IN_INT];
     snprintf(buf, sizeof(buf), "%d", list_size);
     temp[0] = buf;
     *list = temp;
