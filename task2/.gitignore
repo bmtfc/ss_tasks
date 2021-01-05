@@ -1,0 +1,11 @@
+
+.gitignore
+.idea/.gitignore
+.idea/dictionaries
+.idea/misc.xml
+.idea/modules.xml
+.idea/task2.iml
+.idea/vcs.xml
+CMakeLists.txt
+cmake-build-debug/
+
