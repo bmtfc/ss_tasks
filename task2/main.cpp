@@ -9,7 +9,7 @@ int main()
     try
     {
         std::cout << std::boolalpha << X.ToBool() << '\n';
-        std::cout << X.ToInt();
+        std::cout << X.ToDouble();
     }
     catch (AnyTypeException &e)
     {

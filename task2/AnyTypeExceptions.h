@@ -11,21 +11,25 @@ public :
 
 class AnyTypeExceptionBool : public AnyTypeException
 {
+public :
     const char *what() const throw();
 };
 
 class AnyTypeExceptionInt : public AnyTypeException
 {
+public :
     const char *what() const throw();
 };
 
 class AnyTypeExceptionDouble : public AnyTypeException
 {
+public :
     const char *what() const throw();
 };
 
 class AnyTypeExceptionChar : public AnyTypeException
 {
+public :
     const char *what() const throw();
 };
 

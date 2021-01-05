@@ -54,7 +54,6 @@ public:
 
     const char *GetType();
 
-
 };
 
 
