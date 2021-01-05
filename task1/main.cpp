@@ -78,7 +78,7 @@ int StringListIndexOf(char **list, char *str)
     return (-1);
 }
 
-/* Removes all occurrences of str in the list. */
+/* Removes first occurrence of str in the list. */
 void StringListRemove(char ***list, char *str)
 {
     int list_size = atoi(*list[0]) + 1;
