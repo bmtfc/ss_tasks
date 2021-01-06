@@ -29,6 +29,20 @@ AnyType::AnyType(char data)
     data_type = DATA_TYPES[3];
 }
 
+AnyType::AnyType(const AnyType &obj)
+{
+    data_type = obj.data_type;
+    if (data_type == DATA_TYPES[0])
+    { bool_data = obj.bool_data; }
+    if (data_type == DATA_TYPES[1])
+    { int_data = obj.int_data; }
+    if (data_type == DATA_TYPES[2])
+    { double_data = obj.double_data; }
+    if (data_type == DATA_TYPES[3])
+    { char_data = obj.char_data; }
+}
+
+
 void AnyType::SetValue(bool data)
 {
     bool_data = data;
@@ -122,3 +136,32 @@ const char *AnyType::GetType()
 {
     return data_type.data();
 }
+
+AnyType &AnyType::operator=(const bool data)
+{
+    bool_data = data;
+    data_type = DATA_TYPES[0];
+    return *this;
+}
+
+AnyType &AnyType::operator=(const int data)
+{
+    int_data = data;
+    data_type = DATA_TYPES[1];
+    return *this;
+}
+
+AnyType &AnyType::operator=(const double data)
+{
+    double_data = data;
+    data_type = DATA_TYPES[2];
+    return *this;
+}
+
+AnyType &AnyType::operator=(const char data)
+{
+    char_data = data;
+    data_type = DATA_TYPES[3];
+    return *this;
+}
+

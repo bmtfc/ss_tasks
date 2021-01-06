@@ -29,6 +29,8 @@ public:
 
     explicit AnyType(char data);
 
+    AnyType(const AnyType &obj);
+
 
     void SetValue(bool data);
 
@@ -53,6 +55,14 @@ public:
     void SwapWith(AnyType &other);
 
     const char *GetType();
+
+    AnyType &operator=(bool data);
+
+    AnyType &operator=(int data);
+
+    AnyType &operator=(double data);
+
+    AnyType &operator=(char data);
 
 };
 
