@@ -5,7 +5,11 @@
 #include "AnyTypeExceptions.h"
 
 const int NUMBER_OF_DATA_TYPES = 4;
-const std::string DATA_TYPES[NUMBER_OF_DATA_TYPES]{"bool", "int", "double", "char"};
+const std::string DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "double", "char"};
+enum DATA_TYPES
+{
+    BOOL = 0, INT = 1, DOUBLE = 2, CHAR = 3
+};
 
 class AnyType
 {
@@ -18,7 +22,7 @@ private :
         char char_data;
     };
 
-    std::string data_type;
+    DATA_TYPES data_type;
 
 public:
     explicit AnyType(bool data);
