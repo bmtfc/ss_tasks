@@ -28,3 +28,23 @@ const char *AnyTypeExceptionChar::what() const throw()
 {
     return "Type should be \"Char\"\n";
 }
+
+const char *AnyTypeExceptionUnsignedInt::what() const throw()
+{
+    return "Type should be \"Unsigned Int\"\n";
+}
+
+const char *AnyTypeExceptionLongInt::what() const throw()
+{
+    return "Type should be \"Long Int\"\n";
+}
+
+const char *AnyTypeExceptionFloat::what() const throw()
+{
+    return "Type should be \"Float\"\n";
+}
+
+const char *AnyTypeExceptionLongDouble::what() const throw()
+{
+    return "Type should be \"Long Double\"\n";
+}

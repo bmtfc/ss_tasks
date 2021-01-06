@@ -2,6 +2,9 @@
 #define TASK2_ANYTYPEEXCEPTIONS_H
 
 #include <exception>
+#include <typeinfo>
+#include <sstream>
+
 
 class AnyTypeException : public std::exception
 {
@@ -21,7 +24,31 @@ public :
     const char *what() const throw();
 };
 
+class AnyTypeExceptionUnsignedInt : public AnyTypeException
+{
+public :
+    const char *what() const throw();
+};
+
+class AnyTypeExceptionLongInt : public AnyTypeException
+{
+public :
+    const char *what() const throw();
+};
+
+class AnyTypeExceptionFloat : public AnyTypeException
+{
+public :
+    const char *what() const throw();
+};
+
 class AnyTypeExceptionDouble : public AnyTypeException
+{
+public :
+    const char *what() const throw();
+};
+
+class AnyTypeExceptionLongDouble : public AnyTypeException
 {
 public :
     const char *what() const throw();

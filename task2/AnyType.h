@@ -4,11 +4,12 @@
 #include <string>
 #include "AnyTypeExceptions.h"
 
-const int NUMBER_OF_DATA_TYPES = 4;
-const std::string DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "double", "char"};
+const int NUMBER_OF_DATA_TYPES = 8;
+const std::string DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "unsigned int", "long int", "float", "double",
+                                                         "long double", "char"};
 enum DATA_TYPES
 {
-    BOOL = 0, INT = 1, DOUBLE = 2, CHAR = 3
+    BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR
 };
 
 class AnyType
@@ -18,7 +19,11 @@ private :
     {
         bool bool_data;
         int int_data;
+        unsigned int unsigned_int_data;
+        long int long_int_data;
+        float float_data;
         double double_data;
+        long double long_double_data;
         char char_data;
     };
 
@@ -29,7 +34,15 @@ public:
 
     explicit AnyType(int data);
 
+    explicit AnyType(unsigned int data);
+
+    explicit AnyType(long int data);
+
+    explicit AnyType(float data);
+
     explicit AnyType(double data);
+
+    explicit AnyType(long double data);
 
     explicit AnyType(char data);
 
@@ -40,7 +53,15 @@ public:
 
     void SetValue(int data);
 
+    void SetValue(unsigned int data);
+
+    void SetValue(long int data);
+
+    void SetValue(float data);
+
     void SetValue(double data);
+
+    void SetValue(long double data);
 
     void SetValue(char data);
 
@@ -49,7 +70,15 @@ public:
 
     int ToInt();
 
+    unsigned int ToUnsignedInt();
+
+    long int ToLongInt();
+
+    float ToFloat();
+
     double ToDouble();
+
+    long double ToLongDouble();
 
     char ToChar();
 
@@ -60,14 +89,22 @@ public:
 
     const char *GetType();
 
+
     AnyType &operator=(bool data);
 
     AnyType &operator=(int data);
 
+    AnyType &operator=(unsigned int data);
+
+    AnyType &operator=(long int data);
+
+    AnyType &operator=(float data);
+
     AnyType &operator=(double data);
 
-    AnyType &operator=(char data);
+    AnyType &operator=(long double data);
 
+    AnyType &operator=(char data);
 };
 
 
