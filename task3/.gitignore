@@ -1,0 +1,12 @@
+
+.DS_Store
+.gitignore
+.idea/.gitignore
+.idea/dictionaries
+.idea/misc.xml
+.idea/modules.xml
+.idea/task3.iml
+.idea/vcs.xml
+CMakeLists.txt
+cmake-build-debug/
+
