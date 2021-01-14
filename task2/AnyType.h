@@ -4,13 +4,9 @@
 #include <string>
 #include "AnyTypeExceptions.h"
 
-const int NUMBER_OF_DATA_TYPES = 8;
-const std::string DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "unsigned int", "long int", "float", "double",
-                                                         "long double", "char"};
-enum DATA_TYPES
-{
-    BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR
-};
+const int NUMBER_OF_DATA_TYPES = 8 + 1;
+const std::string DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "unsigned int", "long int", "float",
+                                                         "double", "long double", "char", "none"};
 
 class AnyType
 {
@@ -27,7 +23,10 @@ private :
         char char_data;
     };
 
-    DATA_TYPES data_type;
+    enum DATA_TYPES
+    {
+        BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR, NONE
+    } data_type;
 
 public:
     explicit AnyType(bool data);

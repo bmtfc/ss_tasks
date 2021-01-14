@@ -122,22 +122,7 @@ char AnyType::ToChar()
 
 void AnyType::Destroy()
 {
-    if (data_type == BOOL)
-    { bool_data = false; }
-    if (data_type == INT)
-    { int_data = 0; }
-    if (data_type == UNSIGNED_INT)
-    { unsigned_int_data = 0; }
-    if (data_type == LONG_INT)
-    { long_int_data = 0; }
-    if (data_type == FLOAT)
-    { float_data = 0.0; }
-    if (data_type == DOUBLE)
-    { double_data = 0.0; }
-    if (data_type == LONG_DOUBLE)
-    { long_double_data = 0.0; }
-    if (data_type == CHAR)
-    { char_data = '\0'; }
+    data_type = NONE;
 }
 
 void AnyType::SwapWith(AnyType &other)
