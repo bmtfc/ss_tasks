@@ -21,38 +21,38 @@ void StringListInit(char ***list)
         exit(-1);
     }
 
-    Set_Size(*list, 1);
-    Set_Capacity(*list, 1);
+    SetSize(*list, 1);
+    SetCapacity(*list, 1);
 }
 
 void StringListDestroy(char ***list)
 {
-    char **lst = *list;
-    const auto size = Get_Size(lst);
+    char **temp_list = *list;
+    const auto size = GetSize(temp_list);
 
     for (size_t i = 0; i < size; i++)
     {
-        if (lst[i] != nullptr)
-        { free((lst)[i]); }
+        if (temp_list[i] != nullptr)
+        { free((temp_list)[i]); }
     }
 
-    free(lst);
+    free(temp_list);
     *list = nullptr;
 }
 
 void StringListAdd(char ***list, char *str)
 {
-    if (Try_To_Realloc(list) == -1)
+    if (ReallocList(list) == -1)
     {
         exit(-1);
     }
 
-    char **lst = *list;
-    const auto LIST_SIZE = Get_Size(lst);
-    lst[LIST_SIZE] = (char *) malloc((strlen(str) + 1) * sizeof(char));
-    strcpy(lst[LIST_SIZE], str);
+    char **temp_list = *list;
+    const auto LIST_SIZE = GetSize(temp_list);
+    temp_list[LIST_SIZE] = (char *) malloc((strlen(str) + 1) * sizeof(char));
+    strcpy(temp_list[LIST_SIZE], str);
 
-    Set_Size(lst, LIST_SIZE + 1);
+    SetSize(temp_list, LIST_SIZE + 1);
 }
 
 void StringListSet(char **list, size_t i, char *str)
@@ -72,12 +72,12 @@ void StringListGet(char **list, size_t i, char **out)
 
 size_t StringListSize(char **list)
 {
-    return static_cast<size_t>(Get_Size(list) - 1);
+    return static_cast<size_t>(GetSize(list) - 1);
 }
 
 size_t StringListIndexOf(char **list, char *str)
 {
-    for (size_t i = 1; i < Get_Size(list); i++)
+    for (size_t i = 1; i < GetSize(list); i++)
     {
         if (strcmp(list[i], str) == 0)
         {
@@ -90,7 +90,7 @@ size_t StringListIndexOf(char **list, char *str)
 //@TODO : rewrite StringListRemove
 void StringListRemove(char **list, char *str)
 {
-    const auto LIST_SIZE = Get_Size(list);
+    const auto LIST_SIZE = GetSize(list);
     size_t removed_count = 0;
     ssize_t insert_index = -1;
 
@@ -116,12 +116,12 @@ void StringListRemove(char **list, char *str)
         }
     }
 
-    Set_Size(list, LIST_SIZE - removed_count);
+    SetSize(list, LIST_SIZE - removed_count);
 }
 
 void StringListSort(char **list)
 {
-    const auto LIST_SIZE = Get_Size(list);
+    const auto LIST_SIZE = GetSize(list);
     for (size_t i = 1; i < LIST_SIZE; i++)
     {
         for (size_t j = 2; j < LIST_SIZE; j++)
@@ -136,13 +136,15 @@ void StringListSort(char **list)
 
 void StringListPrint(char **list)
 {
-    for (size_t i = 1; i < Get_Size(list); i++)
+    for (size_t i = 1; i < GetSize(list); i++)
     {
         printf("%s\n", list[i]);
     }
     printf("\n");
 }
 
+//@TODO: copied => figure out and rewrite (?)
+//----------------------------------------------------------------------------------------------------------------------
 
 void ToBytes(size_t a, char *out, size_t index)
 {
@@ -169,41 +171,43 @@ size_t ToInt(char *arr, size_t index)
 
 }
 
-void Set_Size(char **list, size_t size)
+void SetSize(char **list, size_t size)
 {
     ToBytes(size, list[0], 0);
 }
 
-void Set_Capacity(char **list, size_t size)
+void SetCapacity(char **list, size_t size)
 {
     ToBytes(size, list[0], sizeof(size_t));
 }
 
-size_t Get_Size(char **list)
+size_t GetSize(char **list)
 {
     return ToInt(list[0], 0);
 }
 
-size_t Get_Capacity(char **list)
+size_t GetCapacity(char **list)
 {
     return ToInt(list[0], sizeof(size_t));
 }
 
-int Try_To_Realloc(char ***list, size_t capacity_scale)
+//----------------------------------------------------------------------------------------------------------------------
+
+int ReallocList(char ***list, size_t capacity_scale)
 {
-    char **lst = *list;
-    const auto LIST_SIZE = Get_Size(lst);
-    const auto LIST_CAPACITY = Get_Capacity(lst);
+    char **temp_list = *list;
+    const auto LIST_SIZE = GetSize(temp_list);
+    const auto LIST_CAPACITY = GetCapacity(temp_list);
 
     if (LIST_SIZE == LIST_CAPACITY)
     {
-        *list = (char **) realloc(lst, LIST_CAPACITY * sizeof(char *) * capacity_scale);
-        Set_Capacity(*list, LIST_CAPACITY * capacity_scale);
+        *list = (char **) realloc(temp_list, LIST_CAPACITY * sizeof(char *) * capacity_scale);
+        SetCapacity(*list, LIST_CAPACITY * capacity_scale);
     }
 
     if (*list == nullptr)
     {
-        free(lst);
+        free(temp_list);
         return -1;
     }
 

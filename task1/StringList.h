@@ -48,19 +48,19 @@ void ToBytes(size_t num, char *out, size_t index);
 size_t ToInt(char *arr, size_t index);
 
 /* Stores list size in first sizeof(size_t) bytes of list[0] */
-void Set_Size(char **list, size_t size);
+void SetSize(char **list, size_t size);
 
 /* Stores list buffer size in second half of list[0]. */
-void Set_Capacity(char **list, size_t size);
+void SetCapacity(char **list, size_t size);
 
-/* Returns ACTUAL number of elements in the list. (n + 1)> */
-size_t Get_Size(char **list);
+/* Returns  number of elements in the list. */
+size_t GetSize(char **list);
 
 /* Returns buffer size of the list. */
-size_t Get_Capacity(char **list);
+size_t GetCapacity(char **list);
 
 /* Reallocating list memory by capacity_scale if list size equals to list capacity. */
-int Try_To_Realloc(char ***list, size_t capacity_scale = 2);
+int ReallocList(char ***list, size_t capacity_scale = 2);
 
 /* Swaps two elements of the list  */
 void Swap(char **list, size_t index1, size_t index2);
