@@ -1,9 +1,7 @@
 #include "ProjectInfo.h"
 #include <thread>
 
-void AnalyzeProject(std::string path);
-
-std::mutex g_mutex;
+void AnalyzeProject(const std::string &path);
 
 int main()
 {
@@ -16,15 +14,13 @@ int main()
         path = "/Users/mac/softserve/ss_tasks";
     }
 
-    std::thread working_thread(AnalyzeProject, path);
-    working_thread.join();
+    AnalyzeProject(path);
 
     return 0;
 }
 
-void AnalyzeProject(std::string path)
+void AnalyzeProject(const std::string &path)
 {
-    std::lock_guard<std::mutex> lock(g_mutex);
     ProjectAnalyzer Analyzer;
     Analyzer.SetPath(path);
     Analyzer.GenerateListOfFilePaths();
