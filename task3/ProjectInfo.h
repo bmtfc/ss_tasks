@@ -40,12 +40,6 @@ private:
     std::string path;
     std::string project_name;
     std::vector<std::string> file_paths;
-private /*methods*/ :
-    static bool check_extension(const std::string &str);
-
-    static bool is_blank_line(const std::string &str);
-
-    static bool is_comment_line(const std::string &str);
 
 public:
 

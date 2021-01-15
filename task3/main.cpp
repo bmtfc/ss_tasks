@@ -24,6 +24,7 @@ void AnalyzeProject(const std::string &path)
     ProjectAnalyzer Analyzer;
     Analyzer.SetPath(path);
     Analyzer.GenerateListOfFilePaths();
+    Analyzer.PrintFilePaths();
     Analyzer.AnalyzeProject();
     Analyzer.PrintInfo();
     Analyzer.CreateJson();

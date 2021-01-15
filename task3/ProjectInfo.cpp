@@ -5,12 +5,12 @@
 #include "ProjectInfo.h"
 
 /* PRIVATE METHODS */
-bool ProjectAnalyzer::check_extension(const std::string &str)
+bool check_extension(const std::string &str)
 {
     return str == ".h" || str == ".hpp" || str == ".c" || str == ".cpp";
 }
 
-bool ProjectAnalyzer::is_blank_line(const std::string &str)
+bool is_blank_line(const std::string &str)
 {
     if (str.empty())
     { return true; }
@@ -21,6 +21,19 @@ bool ProjectAnalyzer::is_blank_line(const std::string &str)
 
     }
     return true;
+}
+
+bool is_comment_line(const std::string &str)
+{
+    bool check{false};
+    if (str.find("//") != std::string::npos)
+    {
+        check = true;
+    } else if (str.find("/*") != std::string::npos && str.find("*/") != std::string::npos)
+    {
+        check = true;
+    }
+    return check;
 }
 
 /* PUBLIC METHODS */
@@ -86,18 +99,6 @@ int ProjectAnalyzer::GetBlankLines()
     return blank_lines;
 }
 
-bool ProjectAnalyzer::is_comment_line(const std::string &str)
-{
-    bool check{false};
-    if (str.find("//") != std::string::npos)
-    {
-        check = true;
-    } else if (str.find("/*") != std::string::npos && str.find("*/") != std::string::npos)
-    {
-        check = true;
-    }
-    return check;
-}
 
 int ProjectAnalyzer::GetCommentLines()
 {
