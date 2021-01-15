@@ -41,29 +41,4 @@ void StringListSort(char **list);
 void StringListPrint(char **list);
 
 
-/* Writes num as sizeof(size_t) bytes into out starting from index */
-void ToBytes(size_t num, char *out, size_t index);
-
-/* Returns sizeof(size_t) bytes of arr starting from index as size_t */
-size_t ToInt(char *arr, size_t index);
-
-/* Stores list size in first sizeof(size_t) bytes of list[0] */
-void SetSize(char **list, size_t size);
-
-/* Stores list buffer size in second half of list[0]. */
-void SetCapacity(char **list, size_t size);
-
-/* Returns  number of elements in the list. */
-size_t GetSize(char **list);
-
-/* Returns buffer size of the list. */
-size_t GetCapacity(char **list);
-
-/* Reallocating list memory by capacity_scale if list size equals to list capacity. */
-int ReallocList(char ***list, size_t capacity_scale = 2);
-
-/* Swaps two elements of the list  */
-void Swap(char **list, size_t index1, size_t index2);
-
-
 #endif //TASK1_STRINGLIST_H

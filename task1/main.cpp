@@ -10,7 +10,6 @@ int main()
     StringListAdd(&list,"uitye");
     StringListAdd(&list,"ccvc");
     StringListPrint(list);
-    printf("actual size : %d, capacity : %d \n\n",GetSize(list),GetCapacity(list));
     printf("Index of \"uitye\" : %d\n\n", StringListIndexOf(list,"uitye")+1);
     printf("Sorted list :\n");
     StringListSort(list);
@@ -18,7 +17,6 @@ int main()
     StringListRemove(list,"ffgh");
     printf("List after deleting \"ffgh\"\n");
     StringListPrint(list);
-    printf("actual size : %d, capacity : %d \n\n",GetSize(list),GetCapacity(list));
     StringListDestroy(&list);
     return 0;
 }

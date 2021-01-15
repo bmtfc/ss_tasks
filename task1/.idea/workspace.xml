@@ -14,6 +14,7 @@
     <list default="true" id="4f7e9e5d-a4ef-404b-b5b9-bd2125c9a19a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StringList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/StringList.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringList.h" beforeDir="false" afterPath="$PROJECT_DIR$/StringList.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
       <workItem from="1609779411972" duration="6371000" />
       <workItem from="1609869185093" duration="2048000" />
       <workItem from="1609871437915" duration="54000" />
-      <workItem from="1610693365619" duration="3958000" />
+      <workItem from="1610693365619" duration="4725000" />
     </task>
     <servers />
   </component>
