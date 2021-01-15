@@ -1,18 +1,34 @@
 #include "ProjectInfo.h"
+#include <thread>
+
+void AnalyzeProject(std::string path);
+
+std::mutex g_mutex;
 
 int main()
 {
-    std::string path = "/Users/mac/softserve/ss_tasks";
+    std::cout << "Enter path to the project (without '\' in the end of path )\n";
+    std::cout << "Example : path \"/Users/mac/softserve/ss_tasks\", so project name : \"ss_tasks\"\n";
+    std::string path;
+    std::cin >> path;
+    if (path == "test")
+    {
+        path = "/Users/mac/softserve/ss_tasks";
+    }
 
-
-    ProjectInfo SSTasks;
-    SSTasks.SetPath(path);
-    SSTasks.GenerateListOfFilePaths();
-    SSTasks.AnalyzeProject();
-    SSTasks.PrintFilePaths();
-    SSTasks.PrintInfo();
-    SSTasks.CreateJson();
-
+    std::thread working_thread(AnalyzeProject, path);
+    working_thread.join();
 
     return 0;
+}
+
+void AnalyzeProject(std::string path)
+{
+    std::lock_guard<std::mutex> lock(g_mutex);
+    ProjectInfo Analyzer;
+    Analyzer.SetPath(path);
+    Analyzer.GenerateListOfFilePaths();
+    Analyzer.AnalyzeProject();
+    Analyzer.PrintInfo();
+    Analyzer.CreateJson();
 }
