@@ -4,6 +4,10 @@
 
 #include "AnyType.h"
 
+const int NUMBER_OF_DATA_TYPES = 9;
+const std::string DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "unsigned int", "long int", "float",
+                                                         "double", "long double", "char", "none"};
+
 AnyType::AnyType(bool data)
 {
     bool_data = data;
@@ -31,23 +35,7 @@ AnyType::AnyType(char data)
 
 AnyType::AnyType(const AnyType &obj)
 {
-    data_type = obj.data_type;
-    if (data_type == BOOL)
-    { bool_data = obj.bool_data; }
-    if (data_type == INT)
-    { int_data = obj.int_data; }
-    if (data_type == UNSIGNED_INT)
-    { unsigned_int_data = obj.unsigned_int_data; }
-    if (data_type == LONG_INT)
-    { long_int_data = obj.long_int_data; }
-    if (data_type == FLOAT)
-    { float_data = obj.float_data; }
-    if (data_type == DOUBLE)
-    { double_data = obj.double_data; }
-    if (data_type == LONG_DOUBLE)
-    { long_double_data = obj.long_double_data; }
-    if (data_type == CHAR)
-    { char_data = obj.char_data; }
+    *this = obj;
 }
 
 
