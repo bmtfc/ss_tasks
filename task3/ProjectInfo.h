@@ -14,7 +14,9 @@
 #include <string>
 #include <cctype>
 
-//@TODO : comment lines
+#include <chrono>
+
+//@TODO : multiline comments
 //@TODO : elapsed time
 //@TODO : .json for results
 //@TODO : multithreading
@@ -29,12 +31,15 @@ private:
         int blank_lines{0};
         int comment_lines{0};
         int code_lines{0};
+        int elapsed_time{0};
     };
     std::vector<std::string> file_paths;
 private /*methods*/ :
     static bool check_extension(const std::string &str);
 
     static bool is_blank_line(const std::string &str);
+
+    static bool is_comment_line(const std::string &str);
 
 public:
 
@@ -49,6 +54,10 @@ public:
     int GetNumberOfFiles();
 
     int GetBlankLines();
+
+    int GetCommentLines();
+
+    int GetCodeLines();
 
 };
 

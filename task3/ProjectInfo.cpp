@@ -3,6 +3,7 @@
 //
 
 #include "ProjectInfo.h"
+
 /* PRIVATE METHODS */
 bool ProjectInfo::check_extension(const std::string &str)
 {
@@ -55,7 +56,15 @@ void ProjectInfo::AnalyzeProject()
         {
             std::getline(file, to_analyze);
             if (is_blank_line(to_analyze))
-            { blank_lines++; }
+            {
+                blank_lines++;
+            } else if (is_comment_line(to_analyze))
+            {
+                comment_lines++;
+            } else
+            {
+                code_lines++;
+            }
         }
         number_of_files++;
         file.close();
@@ -70,4 +79,27 @@ int ProjectInfo::GetNumberOfFiles()
 int ProjectInfo::GetBlankLines()
 {
     return blank_lines;
+}
+
+bool ProjectInfo::is_comment_line(const std::string &str)
+{
+    bool check{false};
+    if (str.find("//") != std::string::npos)
+    {
+        check = true;
+    } else if (str.find("/*") != std::string::npos && str.find("*/") != std::string::npos)
+    {
+        check = true;
+    }
+    return check;
+}
+
+int ProjectInfo::GetCommentLines()
+{
+    return comment_lines;
+}
+
+int ProjectInfo::GetCodeLines()
+{
+    return code_lines;
 }
