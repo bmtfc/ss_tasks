@@ -26,7 +26,7 @@
 //@TODO : multithreading
 
 
-class ProjectInfo
+class ProjectAnalyzer
 {
 private:
     struct
@@ -49,7 +49,7 @@ private /*methods*/ :
 
 public:
 
-    ProjectInfo() = default;
+    ProjectAnalyzer() = default;
 
     void SetPath(const std::string &t_path);
 

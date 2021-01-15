@@ -25,7 +25,7 @@ int main()
 void AnalyzeProject(std::string path)
 {
     std::lock_guard<std::mutex> lock(g_mutex);
-    ProjectInfo Analyzer;
+    ProjectAnalyzer Analyzer;
     Analyzer.SetPath(path);
     Analyzer.GenerateListOfFilePaths();
     Analyzer.AnalyzeProject();

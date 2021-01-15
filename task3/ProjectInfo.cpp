@@ -5,12 +5,12 @@
 #include "ProjectInfo.h"
 
 /* PRIVATE METHODS */
-bool ProjectInfo::check_extension(const std::string &str)
+bool ProjectAnalyzer::check_extension(const std::string &str)
 {
     return str == ".h" || str == ".hpp" || str == ".c" || str == ".cpp";
 }
 
-bool ProjectInfo::is_blank_line(const std::string &str)
+bool ProjectAnalyzer::is_blank_line(const std::string &str)
 {
     if (str.empty())
     { return true; }
@@ -25,7 +25,7 @@ bool ProjectInfo::is_blank_line(const std::string &str)
 
 /* PUBLIC METHODS */
 
-void ProjectInfo::GenerateListOfFilePaths()
+void ProjectAnalyzer::GenerateListOfFilePaths()
 {
     std::filesystem::path fake_path(path);
     project_name = fake_path.filename();
@@ -39,7 +39,7 @@ void ProjectInfo::GenerateListOfFilePaths()
     }
 }
 
-void ProjectInfo::PrintFilePaths()
+void ProjectAnalyzer::PrintFilePaths()
 {
     for (auto &el : file_paths)
     {
@@ -47,7 +47,7 @@ void ProjectInfo::PrintFilePaths()
     }
 }
 
-void ProjectInfo::AnalyzeProject()
+void ProjectAnalyzer::AnalyzeProject()
 {
     std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
     for (auto &file_path : file_paths)
@@ -76,17 +76,17 @@ void ProjectInfo::AnalyzeProject()
     elapsed_time_ms = std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count();
 }
 
-int ProjectInfo::GetNumberOfFiles()
+int ProjectAnalyzer::GetNumberOfFiles()
 {
     return number_of_files;
 }
 
-int ProjectInfo::GetBlankLines()
+int ProjectAnalyzer::GetBlankLines()
 {
     return blank_lines;
 }
 
-bool ProjectInfo::is_comment_line(const std::string &str)
+bool ProjectAnalyzer::is_comment_line(const std::string &str)
 {
     bool check{false};
     if (str.find("//") != std::string::npos)
@@ -99,27 +99,27 @@ bool ProjectInfo::is_comment_line(const std::string &str)
     return check;
 }
 
-int ProjectInfo::GetCommentLines()
+int ProjectAnalyzer::GetCommentLines()
 {
     return comment_lines;
 }
 
-int ProjectInfo::GetCodeLines()
+int ProjectAnalyzer::GetCodeLines()
 {
     return code_lines;
 }
 
-int ProjectInfo::GetElapsedTime()
+int ProjectAnalyzer::GetElapsedTime()
 {
     return elapsed_time_ms;
 }
 
-void ProjectInfo::SetPath(const std::string &t_path)
+void ProjectAnalyzer::SetPath(const std::string &t_path)
 {
     path = t_path;
 }
 
-void ProjectInfo::CreateJson()
+void ProjectAnalyzer::CreateJson()
 {
     boost::property_tree::ptree pt;
     pt.put("project_name", project_name);
@@ -136,12 +136,12 @@ void ProjectInfo::CreateJson()
     file << ss.str();
 }
 
-std::string ProjectInfo::GetProjectName()
+std::string ProjectAnalyzer::GetProjectName()
 {
     return project_name;
 }
 
-void ProjectInfo::PrintInfo()
+void ProjectAnalyzer::PrintInfo()
 {
     std::cout << "Project \"" << project_name << "\" : \n";
     std::cout << "\tpath : \"" << path << "\"\n";
