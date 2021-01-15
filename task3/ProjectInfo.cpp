@@ -47,6 +47,7 @@ void ProjectInfo::PrintFilePaths()
 
 void ProjectInfo::AnalyzeProject()
 {
+    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
     for (auto &file_path : file_paths)
     {
         std::ifstream file;
@@ -69,6 +70,8 @@ void ProjectInfo::AnalyzeProject()
         number_of_files++;
         file.close();
     }
+    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+    elapsed_time_ms = std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count();
 }
 
 int ProjectInfo::GetNumberOfFiles()
@@ -102,4 +105,9 @@ int ProjectInfo::GetCommentLines()
 int ProjectInfo::GetCodeLines()
 {
     return code_lines;
+}
+
+int ProjectInfo::GetElapsedTime()
+{
+    return elapsed_time_ms;
 }

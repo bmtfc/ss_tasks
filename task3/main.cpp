@@ -15,6 +15,7 @@ int main()
     std::cout << A.GetBlankLines() << '\n';
     std::cout << A.GetCommentLines() << '\n';
     std::cout << A.GetCodeLines() << '\n';
+    std::cout << A.GetElapsedTime() << '\n';
 
 
     return 0;

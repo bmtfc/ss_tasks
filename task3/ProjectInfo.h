@@ -31,7 +31,7 @@ private:
         int blank_lines{0};
         int comment_lines{0};
         int code_lines{0};
-        int elapsed_time{0};
+        int elapsed_time_ms{0};
     };
     std::vector<std::string> file_paths;
 private /*methods*/ :
@@ -58,6 +58,8 @@ public:
     int GetCommentLines();
 
     int GetCodeLines();
+
+    int GetElapsedTime();
 
 };
 
