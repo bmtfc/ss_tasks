@@ -25,8 +25,10 @@ bool ProjectInfo::is_blank_line(const std::string &str)
 
 /* PUBLIC METHODS */
 
-void ProjectInfo::SetListOfFilePaths(const std::string &path)
+void ProjectInfo::GenerateListOfFilePaths()
 {
+    std::filesystem::path fake_path(path);
+    project_name = fake_path.filename();
     for (const auto &file : std::filesystem::recursive_directory_iterator(path))
     {
 
@@ -110,4 +112,31 @@ int ProjectInfo::GetCodeLines()
 int ProjectInfo::GetElapsedTime()
 {
     return elapsed_time_ms;
+}
+
+void ProjectInfo::SetPath(const std::string &t_path)
+{
+    path = t_path;
+}
+
+void ProjectInfo::CreateJson()
+{
+    boost::property_tree::ptree pt;
+    pt.put("project_name", project_name);
+    pt.put("full_path", path);
+    pt.put("data.number_of_files", number_of_files);
+    pt.put("data.blank_lines", blank_lines);
+    pt.put("data.comment_lines", comment_lines);
+    pt.put("data.code_lines", code_lines);
+    pt.put("data.elapsed_time_ms", elapsed_time_ms);
+
+    std::stringstream ss;
+    boost::property_tree::json_parser::write_json(ss, pt);
+    std::ofstream file(project_name + ".json");
+    file << ss.str();
+}
+
+std::string ProjectInfo::GetProjectName()
+{
+    return project_name;
 }

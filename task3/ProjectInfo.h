@@ -16,9 +16,12 @@
 
 #include <chrono>
 
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
+#include <boost/optional.hpp>
+
+
 //@TODO : multiline comments
-//@TODO : elapsed time
-//@TODO : .json for results
 //@TODO : multithreading
 
 
@@ -33,6 +36,8 @@ private:
         int code_lines{0};
         int elapsed_time_ms{0};
     };
+    std::string path;
+    std::string project_name;
     std::vector<std::string> file_paths;
 private /*methods*/ :
     static bool check_extension(const std::string &str);
@@ -45,11 +50,15 @@ public:
 
     ProjectInfo() = default;
 
-    void SetListOfFilePaths(const std::string &path);
+    void SetPath(const std::string &t_path);
+
+    void GenerateListOfFilePaths();
 
     void PrintFilePaths();
 
     void AnalyzeProject();
+
+    void CreateJson();
 
     int GetNumberOfFiles();
 
@@ -60,6 +69,8 @@ public:
     int GetCodeLines();
 
     int GetElapsedTime();
+
+    std::string GetProjectName();
 
 };
 
