@@ -48,11 +48,11 @@ void StringListAdd(char ***list, char *str)
     }
 
     char **temp_list = *list;
-    const auto LIST_SIZE = GetSize(temp_list);
-    temp_list[LIST_SIZE] = (char *) malloc((strlen(str) + 1) * sizeof(char));
-    strcpy(temp_list[LIST_SIZE], str);
+    const auto list_size = GetSize(temp_list);
+    temp_list[list_size] = (char *) malloc((strlen(str) + 1) * sizeof(char));
+    strcpy(temp_list[list_size], str);
 
-    SetSize(temp_list, LIST_SIZE + 1);
+    SetSize(temp_list, list_size + 1);
 }
 
 void StringListSet(char **list, size_t i, char *str)
@@ -90,11 +90,11 @@ size_t StringListIndexOf(char **list, char *str)
 //@TODO : rewrite StringListRemove
 void StringListRemove(char **list, char *str)
 {
-    const auto LIST_SIZE = GetSize(list);
+    const auto list_size = GetSize(list);
     size_t removed_count = 0;
     ssize_t insert_index = -1;
 
-    for (size_t i = 1; i < LIST_SIZE; i++)
+    for (size_t i = 1; i < list_size; i++)
     {
         if (insert_index == -1 && strcmp(list[i], str) == 0)
         {
@@ -116,15 +116,15 @@ void StringListRemove(char **list, char *str)
         }
     }
 
-    SetSize(list, LIST_SIZE - removed_count);
+    SetSize(list, list_size - removed_count);
 }
 
 void StringListSort(char **list)
 {
-    const auto LIST_SIZE = GetSize(list);
-    for (size_t i = 1; i < LIST_SIZE; i++)
+    const auto list_size = GetSize(list);
+    for (size_t i = 1; i < list_size; i++)
     {
-        for (size_t j = 2; j < LIST_SIZE; j++)
+        for (size_t j = 2; j < list_size; j++)
         {
             if (strcmp(list[j], list[j - 1]) < 0)
             {
@@ -149,14 +149,19 @@ void StringListPrint(char **list)
 void ToBytes(size_t a, char *out, size_t index)
 {
     out = out + index;
+    /*
     for (int i = 0; i < sizeof(size_t); i++)
     {
         out[i] = static_cast<char>((a >> (i * 8)) & 0xFF);
     }
+    */
+    *reinterpret_cast<size_t*>(out) = a;
+
 }
 
 size_t ToInt(char *arr, size_t index)
 {
+    /*
     arr = arr + index;
 
     size_t result = 0;
@@ -168,7 +173,8 @@ size_t ToInt(char *arr, size_t index)
         bitmap <<= 8;
     }
     return result;
-
+    */
+    return *reinterpret_cast<size_t*>(arr + index);
 }
 
 void SetSize(char **list, size_t size)
@@ -196,13 +202,13 @@ size_t GetCapacity(char **list)
 int ReallocList(char ***list, size_t capacity_scale)
 {
     char **temp_list = *list;
-    const auto LIST_SIZE = GetSize(temp_list);
-    const auto LIST_CAPACITY = GetCapacity(temp_list);
+    const auto list_size = GetSize(temp_list);
+    const auto list_capacity = GetCapacity(temp_list);
 
-    if (LIST_SIZE == LIST_CAPACITY)
+    if (list_size == list_capacity)
     {
-        *list = (char **) realloc(temp_list, LIST_CAPACITY * sizeof(char *) * capacity_scale);
-        SetCapacity(*list, LIST_CAPACITY * capacity_scale);
+        *list = (char **) realloc(temp_list, list_capacity * sizeof(char *) * capacity_scale);
+        SetCapacity(*list, list_capacity * capacity_scale);
     }
 
     if (*list == nullptr)
