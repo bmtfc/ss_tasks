@@ -21,6 +21,7 @@
 #include <boost/optional.hpp>
 
 
+//@TODO : fix path ( should not end with '/' )
 //@TODO : multiline comments
 //@TODO : multithreading
 
@@ -71,6 +72,8 @@ public:
     int GetElapsedTime();
 
     std::string GetProjectName();
+
+    void PrintInfo();
 
 };
 

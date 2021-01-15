@@ -140,3 +140,14 @@ std::string ProjectInfo::GetProjectName()
 {
     return project_name;
 }
+
+void ProjectInfo::PrintInfo()
+{
+    std::cout << "Project \"" << project_name << "\" : \n";
+    std::cout << "\tpath : \"" << path << "\"\n";
+    std::cout << "\tnumber of files : " << number_of_files << '\n';
+    std::cout << "\tnumber of blank lines : " << blank_lines << '\n';
+    std::cout << "\tnumber of comment lines : " << comment_lines << '\n';
+    std::cout << "\tnumber of code lines : " << code_lines << '\n';
+    std::cout << "\telapsed time : " << elapsed_time_ms << " ms \n";
+}
