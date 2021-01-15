@@ -33,11 +33,6 @@ AnyType::AnyType(char data)
     data_type = CHAR;
 }
 
-AnyType::AnyType(const AnyType &obj)
-{
-    *this = obj;
-}
-
 
 void AnyType::SetValue(bool data)
 {

@@ -42,7 +42,7 @@ public:
 
     explicit AnyType(char data);
 
-    AnyType(const AnyType &obj);
+    AnyType(const AnyType &obj) = default;
 
 
     void SetValue(bool data);
