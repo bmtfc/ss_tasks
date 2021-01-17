@@ -4,28 +4,12 @@
 #include <string>
 #include "AnyTypeExceptions.h"
 
+
+/*Class, that contains variable of types BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR */
 class AnyType
 {
-private :
-    union
-    {
-        bool bool_data;
-        int int_data;
-        unsigned int unsigned_int_data;
-        long int long_int_data;
-        float float_data;
-        double double_data;
-        long double long_double_data;
-        char char_data;
-    };
-
-    enum DATA_TYPES
-    {
-        BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR, NONE
-    } data_type;
-
-
 public:
+    // Constructors
     explicit AnyType(bool data);
 
     explicit AnyType(int data);
@@ -42,9 +26,10 @@ public:
 
     explicit AnyType(char data);
 
+    //Copy constructor
     AnyType(const AnyType &obj) = default;
 
-
+    //Setters
     void SetValue(bool data);
 
     void SetValue(int data);
@@ -62,6 +47,7 @@ public:
     void SetValue(char data);
 
 
+    // return data, may throw AnyTypeException
     bool ToBool();
 
     int ToInt();
@@ -83,6 +69,7 @@ public:
 
     void SwapWith(AnyType &other);
 
+    //return type of variable in class
     const char *GetType();
 
 
@@ -101,6 +88,29 @@ public:
     AnyType &operator=(long double data);
 
     AnyType &operator=(char data);
+
+
+private :
+
+    union
+    {
+        bool bool_data;
+        int int_data;
+        unsigned int unsigned_int_data;
+        long int long_int_data;
+        float float_data;
+        double double_data;
+        long double long_double_data;
+        char char_data;
+    };
+
+    enum DATA_TYPES
+    {
+        BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR, NONE
+    } data_type;
+
+    static bool CheckData(DATA_TYPES curr, DATA_TYPES expected);
+
 };
 
 

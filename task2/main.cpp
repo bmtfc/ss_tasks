@@ -9,20 +9,21 @@ int main()
     Y = true;
     //X.SwapWith(Y);
     Z.SwapWith(Y);
+    Z = X;
     try
     {
         std::cout << std::boolalpha << X.ToBool() << '\n';
         std::cout << X.ToDouble();
     }
-    catch (AnyTypeException &e)
+    catch (std::exception &e)
     {
-        std::cout << e.what();
+        std::cout << e.what() << '\n';
     }
     X = 't';
     std::cout << Y.GetType() << '\n';
     try
     {
-        std::cout << X.ToChar();
+        std::cout << Z.ToChar();
     }
     catch (AnyTypeException &e)
     {
