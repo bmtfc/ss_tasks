@@ -29,6 +29,9 @@ int main()
     {
         std::cout << e.what();
     }
+    X.Destroy();
+    std::cout << X.GetType();
+
 
     return 0;
 }

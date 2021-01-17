@@ -8,4 +8,5 @@
 .idea/vcs.xml
 CMakeLists.txt
 cmake-build-debug/
-
+cmake-build-debug-coverage/
+gtest_lib

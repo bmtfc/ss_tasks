@@ -3,7 +3,7 @@
 
 #include <string>
 #include "AnyTypeExceptions.h"
-
+#include <iostream>
 
 /*Class, that contains variable of types BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR */
 class AnyType
@@ -69,9 +69,8 @@ public:
 
     void SwapWith(AnyType &other);
 
-    //return type of variable in class
+    //return name type of variable in class
     const char *GetType();
-
 
     AnyType &operator=(bool data);
 
