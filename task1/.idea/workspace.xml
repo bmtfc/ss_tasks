@@ -2,19 +2,30 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="task1" targetName="gtest_main" />
+      <config projectName="task1" targetName="task1_lib" />
+      <config projectName="task1" targetName="gmock_main" />
+      <config projectName="task1" targetName="gmock" />
+      <config projectName="task1" targetName="gtest" />
+      <config projectName="task1" targetName="task1_test" />
       <config projectName="task1" targetName="task1" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+      <configuration PROFILE_NAME="Debug-Coverage" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_CXX_FLAGS=&quot;-fprofile-instr-generate -fcoverage-mapping&quot; -DCMAKE_C_FLAGS=&quot;-fprofile-instr-generate -fcoverage-mapping&quot;" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f7e9e5d-a4ef-404b-b5b9-bd2125c9a19a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/StringList.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringList.h" beforeDir="false" afterPath="$PROJECT_DIR$/StringList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringList.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringList.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/ProjectInfo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/ProjectInfo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/ProjectInfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/ProjectInfo.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +35,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Coverage" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -36,6 +47,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="cf.advertisement.text.overridden" value="true" />
@@ -52,22 +64,62 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="Google Test.task1_test">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="task1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="task1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="task1" RUN_TARGET_NAME="task1">
+    <configuration name="task1_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="task1_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="task1" RUN_TARGET_NAME="task1_test" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="gmock" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="task1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="task1" RUN_TARGET_NAME="task1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task1_lib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1" TARGET_NAME="task1_lib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CMake Application.task1" />
+      <item itemvalue="CMake Application.task1_lib" />
+      <item itemvalue="Google Test.task1_test" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,7 +140,11 @@
       <workItem from="1609779411972" duration="6371000" />
       <workItem from="1609869185093" duration="2048000" />
       <workItem from="1609871437915" duration="54000" />
-      <workItem from="1610693365619" duration="4725000" />
+      <workItem from="1610693365619" duration="5245000" />
+      <workItem from="1610718432608" duration="1415000" />
+      <workItem from="1610885050137" duration="879000" />
+      <workItem from="1610926801106" duration="12000" />
+      <workItem from="1610926917025" duration="382000" />
     </task>
     <servers />
   </component>
@@ -108,25 +164,29 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1608850928542" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom" timestamp="1610698865781">
-      <screen x="0" y="25" width="1440" height="825" />
+    <state width="1398" height="207" key="GridCell.Tab.0.bottom" timestamp="1610714400172">
+      <screen x="0" y="25" width="1440" height="824" />
     </state>
     <state width="1398" height="301" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1609786073351" />
+    <state width="1398" height="207" key="GridCell.Tab.0.bottom/0.25.1440.824@0.25.1440.824" timestamp="1610714400172" />
     <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.25.1440.825@0.25.1440.825" timestamp="1610698865781" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center" timestamp="1610698865779">
-      <screen x="0" y="25" width="1440" height="825" />
+    <state width="1398" height="207" key="GridCell.Tab.0.center" timestamp="1610714400170">
+      <screen x="0" y="25" width="1440" height="824" />
     </state>
     <state width="1398" height="301" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1609786073350" />
+    <state width="1398" height="207" key="GridCell.Tab.0.center/0.25.1440.824@0.25.1440.824" timestamp="1610714400170" />
     <state width="1398" height="208" key="GridCell.Tab.0.center/0.25.1440.825@0.25.1440.825" timestamp="1610698865779" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left" timestamp="1610698865779">
-      <screen x="0" y="25" width="1440" height="825" />
+    <state width="1398" height="207" key="GridCell.Tab.0.left" timestamp="1610714400160">
+      <screen x="0" y="25" width="1440" height="824" />
     </state>
     <state width="1398" height="301" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1609786073348" />
+    <state width="1398" height="207" key="GridCell.Tab.0.left/0.25.1440.824@0.25.1440.824" timestamp="1610714400160" />
     <state width="1398" height="208" key="GridCell.Tab.0.left/0.25.1440.825@0.25.1440.825" timestamp="1610698865779" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right" timestamp="1610698865780">
-      <screen x="0" y="25" width="1440" height="825" />
+    <state width="1398" height="207" key="GridCell.Tab.0.right" timestamp="1610714400172">
+      <screen x="0" y="25" width="1440" height="824" />
     </state>
     <state width="1398" height="301" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1609786073350" />
+    <state width="1398" height="207" key="GridCell.Tab.0.right/0.25.1440.824@0.25.1440.824" timestamp="1610714400172" />
     <state width="1398" height="208" key="GridCell.Tab.0.right/0.25.1440.825@0.25.1440.825" timestamp="1610698865780" />
     <state width="1398" height="259" key="GridCell.Tab.1.bottom" timestamp="1609871243424">
       <screen x="0" y="25" width="1440" height="825" />
@@ -172,5 +232,8 @@
       <screen x="0" y="25" width="1440" height="825" />
     </state>
     <state x="385" y="174" width="670" height="676" key="search.everywhere.popup/0.25.1440.825@0.25.1440.825" timestamp="1610695542454" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../../softserve/ss_tasks/task1/cmake-build-debug-coverage" NAME="task1_test Coverage Results" MODIFIED="1610927300670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

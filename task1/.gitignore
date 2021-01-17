@@ -9,3 +9,9 @@ cmake-build-debug
 /.gitignore
 /.idea
 /.idea/
+cmake-build-debug-coverage/
+cmake-build-debug-coverage
+gtest_lib
+gtest_lib/
+src/CMakeLists.txt
+tests/CMakeLists.txt

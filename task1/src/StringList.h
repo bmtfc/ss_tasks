@@ -1,7 +1,3 @@
-//
-// Created by Mac on 15.01.2021.
-//
-
 #ifndef TASK1_STRINGLIST_H
 #define TASK1_STRINGLIST_H
 

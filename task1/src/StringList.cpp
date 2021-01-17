@@ -1,11 +1,4 @@
-//
-// Created by Mac on 15.01.2021.
-//
-
 #include "StringList.h"
-
-// dynamic array implementation
-// first "char*" contains size and capacity (sizeof(size_t) both);
 
 /* PRIVATE METHODS */
 
@@ -33,6 +26,8 @@ int ReallocList(char ***list, size_t capacity_scale = 2);
 /* Swaps two elements of the list  */
 void Swap(char **list, size_t index1, size_t index2);
 
+/* IMPLEMENTATION */
+// TODO : fix exit(-1), replace with return + add messages about errors or NULL in ptr
 
 void StringListInit(char ***list)
 {
@@ -60,7 +55,9 @@ void StringListDestroy(char ***list)
     for (size_t i = 0; i < size; i++)
     {
         if (temp_list[i] != nullptr)
-        { free((temp_list)[i]); }
+        {
+            free((temp_list)[i]);
+        }
     }
 
     free(temp_list);
@@ -86,7 +83,9 @@ void StringListSet(char **list, size_t i, char *str)
 {
     const size_t actual_i = i + 1;
     if (list[actual_i] != nullptr)
-    { free(list[actual_i]); }
+    {
+        free(list[actual_i]);
+    }
     list[actual_i] = (char *) malloc((strlen(str) + 1) * sizeof(char));
     strcpy(list[actual_i], str);
 }
@@ -114,7 +113,7 @@ size_t StringListIndexOf(char **list, char *str)
     return -1;
 }
 
-//@TODO : сopied, rewrite StringListRemove
+//@TODO : copied, rewrite StringListRemove
 void StringListRemove(char **list, char *str)
 {
     const auto list_size = GetSize(list);
@@ -135,7 +134,8 @@ void StringListRemove(char **list, char *str)
                 free(list[i]);
                 list[i] = nullptr;
                 removed_count++;
-            } else
+            }
+            else
             {
                 Swap(list, i, insert_index);
                 insert_index++;
@@ -170,38 +170,15 @@ void StringListPrint(char **list)
     printf("\n");
 }
 
-//@TODO: copied => figure out and rewrite (?)
-//----------------------------------------------------------------------------------------------------------------------
-
 void ToBytes(size_t a, char *out, size_t index)
 {
     out = out + index;
-    /*
-    for (int i = 0; i < sizeof(size_t); i++)
-    {
-        out[i] = static_cast<char>((a >> (i * 8)) & 0xFF);
-    }
-    */
-    *reinterpret_cast<size_t*>(out) = a;
-
+    *reinterpret_cast<size_t *>(out) = a;
 }
 
 size_t ToInt(char *arr, size_t index)
 {
-    /*
-    arr = arr + index;
-
-    size_t result = 0;
-    size_t bitmap = 0xFF;
-
-    for (int i = 0; i < sizeof(size_t); i++)
-    {
-        result |= (arr[i] << (i * 8)) & bitmap;
-        bitmap <<= 8;
-    }
-    return result;
-    */
-    return *reinterpret_cast<size_t*>(arr + index);
+    return *reinterpret_cast<size_t *>(arr + index);
 }
 
 void SetSize(char **list, size_t size)
@@ -223,8 +200,6 @@ size_t GetCapacity(char **list)
 {
     return ToInt(list[0], sizeof(size_t));
 }
-
-//----------------------------------------------------------------------------------------------------------------------
 
 int ReallocList(char ***list, size_t capacity_scale)
 {
