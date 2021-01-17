@@ -298,7 +298,7 @@ bool AnyType::CheckData(AnyType::DATA_TYPES curr, AnyType::DATA_TYPES expected)
         }
         case DOUBLE:
         {
-            if (curr != BOOL)
+            if (curr != DOUBLE)
             {
                 throw AnyTypeExceptionDouble();
             }
@@ -307,7 +307,7 @@ bool AnyType::CheckData(AnyType::DATA_TYPES curr, AnyType::DATA_TYPES expected)
         }
         case LONG_DOUBLE:
         {
-            if (curr != BOOL)
+            if (curr != LONG_DOUBLE)
             {
                 throw AnyTypeExceptionLongDouble();
             }
@@ -316,7 +316,7 @@ bool AnyType::CheckData(AnyType::DATA_TYPES curr, AnyType::DATA_TYPES expected)
         }
         case CHAR:
         {
-            if (curr != BOOL)
+            if (curr != CHAR)
             {
                 throw AnyTypeExceptionChar();
             }
