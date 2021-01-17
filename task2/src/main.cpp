@@ -1,37 +1,32 @@
 #include <iostream>
 #include "AnyType.h"
 
+using namespace std;
+
 int main()
 {
-    AnyType X(7.98);
-    AnyType Y(false);
-    AnyType Z(X);
-    Y = true;
-    //X.SwapWith(Y);
-    Z.SwapWith(Y);
-    Z = X;
+    AnyType x(2);
+    cout << "Creating AnyType variable with type \"int\" and value 2\n";
+    cout << "X - value : " << x.ToInt() << ", type : " << x.GetType() << "\n\n";
+    cout << "Trying to cast to \"double\"\n";
     try
     {
-        std::cout << std::boolalpha << X.ToBool() << '\n';
-        std::cout << X.ToDouble();
+        x.ToDouble();
     }
-    catch (std::exception &e)
+    catch (const AnyTypeException &e)
     {
-        std::cout << e.what() << '\n';
+        cout << e.what() << '\n';
     }
-    X = 't';
-    std::cout << Y.GetType() << '\n';
-    try
-    {
-        std::cout << Z.ToChar();
-    }
-    catch (AnyTypeException &e)
-    {
-        std::cout << e.what();
-    }
-    X.Destroy();
-    std::cout << X.GetType();
 
+    AnyType y(true);
+    x.SwapWith(y);
+    cout << "Creating AnyType variable with type \"bool\" and value true\n";
+    cout << "Using \"swap\" method\n";
+    cout << "X - value : " << boolalpha << x.ToBool() << ", type : " << x.GetType() << '\n';
+    cout << "Y - value : " << y.ToInt() << ", type : " << y.GetType() << "\n\n";
+    cout << "Using destroy method \n";
+    x.Destroy();
+    cout << "Type of variable after destroying : " << x.GetType() << '\n';
 
     return 0;
 }
