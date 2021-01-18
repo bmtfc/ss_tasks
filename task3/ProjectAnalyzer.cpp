@@ -1,32 +1,10 @@
-//
-// Created by Mac on 15.01.2021.
-//
-
 #include "ProjectAnalyzer.h"
 
-bool check_extension(const std::string &str)
+void ProjectAnalyzer::SetPath(const std::string &t_path)
 {
-    return str == ".h" || str == ".hpp" || str == ".c" || str == ".cpp";
-}
-
-void ProjectAnalyzer::GenerateListOfFilePaths()
-{
-    for (const auto &file : std::filesystem::recursive_directory_iterator(path))
-    {
-
-        if (check_extension(file.path().extension()))
-        {
-            file_paths.push_back(file.path().string());
-        }
-    }
-}
-
-void ProjectAnalyzer::PrintFilePaths()
-{
-    for (auto &el : file_paths)
-    {
-        std::cout << el << '\n';
-    }
+    path = t_path;
+    std::filesystem::path fake_path(path);
+    project_name = fake_path.filename().string();
 }
 
 void ProjectAnalyzer::AnalyzeProject()
@@ -34,28 +12,17 @@ void ProjectAnalyzer::AnalyzeProject()
     this->GenerateListOfFilePaths();
 
     std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-
     boost::asio::thread_pool pool(4);
     std::mutex m;
-
     for (auto &file_path : file_paths)
     {
         boost::asio::post(pool, boost::bind(ProcessFile, file_path, std::ref(project_data),
                                             std::ref(number_of_files), std::ref(m)));
     }
-
     pool.join();
 
     std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
     elapsed_time_ms = std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() / (1000);
-}
-
-
-void ProjectAnalyzer::SetPath(const std::string &t_path)
-{
-    path = t_path;
-    std::filesystem::path fake_path(path);
-    project_name = fake_path.filename().string();
 }
 
 void ProjectAnalyzer::CreateJson()
@@ -74,11 +41,9 @@ void ProjectAnalyzer::CreateJson()
     boost::property_tree::json_parser::write_json(ss, pt);
     std::ofstream file(project_name + ".json");
     std::string data_json = ss.str();
-    //std::replace(data_json.begin(), data_json.end(),'\\',' ');
     data_json.erase(std::remove(data_json.begin(), data_json.end(), '\\'), data_json.end());
     file << data_json;
 }
-
 
 void ProjectAnalyzer::PrintInfo()
 {
@@ -92,6 +57,31 @@ void ProjectAnalyzer::PrintInfo()
     std::cout << "\telapsed time : " << elapsed_time_ms << " ms \n";
 }
 
+void ProjectAnalyzer::PrintFilePaths()
+{
+    for (auto &el : file_paths)
+    {
+        std::cout << el << '\n';
+    }
+}
+
+bool check_extension(const std::string &str)
+{
+    return str == ".h" || str == ".hpp" || str == ".c" || str == ".cpp";
+}
+
+void ProjectAnalyzer::GenerateListOfFilePaths()
+{
+    for (const auto &file : std::filesystem::recursive_directory_iterator(path))
+    {
+
+        if (check_extension(file.path().extension()))
+        {
+            file_paths.push_back(file.path().string());
+        }
+    }
+}
+
 void ProjectAnalyzer::ProcessFile(const std::string &file_path, FileData &curr, int &file_count, std::mutex &f_mutex)
 {
     FileData temp = FileAnalyzer::AnalyzeFile(file_path);
@@ -100,8 +90,3 @@ void ProjectAnalyzer::ProcessFile(const std::string &file_path, FileData &curr, 
     curr += temp;
     f_mutex.unlock();
 }
-
-
-
-
-

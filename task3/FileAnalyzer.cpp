@@ -47,7 +47,6 @@ FileData FileAnalyzer::AnalyzeFile(const std::string &file_path)
             }
             continue;
         }
-
         if (std::regex_match(to_analyze, rgx_blank))
         {
             curr.blank_lines++;

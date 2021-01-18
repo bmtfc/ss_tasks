@@ -1,7 +1,3 @@
-//
-// Created by Mac on 18.01.2021.
-//
-
 #ifndef TASK3_FILEANALYZER_H
 #define TASK3_FILEANALYZER_H
 
@@ -9,9 +5,7 @@
 #include <fstream>
 #include <regex>
 
-//@TODO : multiline comments
-//TODO : REGEX BLYAT
-
+//struct to contain data about files
 struct FileData
 {
     int all_lines{0};
@@ -20,9 +14,8 @@ struct FileData
     int code_lines{0};
 
     FileData &operator+=(const FileData &r);
-
 };
-
+//class to analyze file
 class FileAnalyzer
 {
 public:
