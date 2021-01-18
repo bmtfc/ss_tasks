@@ -1,30 +1,28 @@
 #include "ProjectAnalyzer.h"
-#include <thread>
 
-void AnalyzeProject(const std::string &path);
-
-int main()
+int main(int argc, char *argv[])
 {
-    std::cout << "Enter path to the project (without '\' in the end of path )\n";
-    std::cout << "Example : path \"/Users/mac/softserve/ss_tasks\", so project name : \"ss_tasks\"\n";
-    std::string path;
-    std::cin >> path;
-    if (path == "test")
+    if (argc == 1)
     {
-        path = "/Users/mac/softserve/ss_tasks";
+        std::cout << "You haven't enter the path to project directory\n";
+        return 1;
+    }
+    if (argc > 2)
+    {
+        std::cout << "You have entered too mane arguments\n";
+        return 2;
     }
 
-    AnalyzeProject(path);
-
-    return 0;
-}
-
-void AnalyzeProject(const std::string &path)
-{
+    std::string project_path(argv[1]);
+    //fixing entered path
+    if (*(project_path.end() - 1) == '/')
+    {
+        project_path.erase(project_path.end() - 1);
+    }
     ProjectAnalyzer Analyzer;
-    Analyzer.SetPath(path);
+    Analyzer.SetPath(project_path);
     Analyzer.AnalyzeProject();
-    Analyzer.PrintFilePaths();
     Analyzer.PrintInfo();
     Analyzer.CreateJson();
+    return 0;
 }
