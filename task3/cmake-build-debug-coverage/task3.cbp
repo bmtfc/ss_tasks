@@ -172,6 +172,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -195,6 +196,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -218,6 +220,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
@@ -243,6 +246,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
@@ -268,6 +272,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
@@ -293,6 +298,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
@@ -318,6 +324,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -341,6 +348,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -364,6 +372,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -387,6 +396,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
 					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -434,6 +444,9 @@
 		</Unit>
 		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/main.cpp">
 			<Option target="task3"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/tests/FOR_TESTING.h">
+			<Option target="task3_test"/>
 		</Unit>
 		<Unit filename="/Users/mac/softserve/ss_tasks/task3/tests/main.cpp">
 			<Option target="task3_test"/>

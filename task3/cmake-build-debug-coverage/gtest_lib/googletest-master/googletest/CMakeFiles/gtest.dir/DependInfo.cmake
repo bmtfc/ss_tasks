@@ -10,6 +10,7 @@ set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/Users/mac/boost_1_75_0"
   "../gtest_lib/googletest-master/googletest/include"
   "../gtest_lib/googletest-master/googletest"
   )

@@ -6,5 +6,5 @@ CXX_FLAGS = -fprofile-instr-generate -fcoverage-mapping -g -isysroot /Applicatio
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include -isystem /Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest 
+CXX_INCLUDES = -I/Users/mac/boost_1_75_0 -isystem /Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include -isystem /Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest 
 
