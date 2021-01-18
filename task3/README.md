@@ -1,4 +1,4 @@
-# soft_task3_explanation
+# soft serve task 3
 #### As a developer
 I want to have an application that counts blank lines, comment lines, and physical lines of source code written in C/C++.
 #### So that
