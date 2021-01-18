@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libtask3_lib.a  CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libtask3_lib.a

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="task3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\gtest_lib\;CMake Files\gtest_lib\googletest-master\;CMake Files\gtest_lib\googletest-master\googlemock\;CMake Files\gtest_lib\googletest-master\googlemock\cmake\;CMake Files\gtest_lib\googletest-master\googletest\;CMake Files\gtest_lib\googletest-master\googletest\cmake\;CMake Files\src\;CMake Files\tests\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/task3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 task3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3/fast">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/task3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 task3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_lib">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/libtask3_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 task3_lib"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_lib/fast">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/libtask3_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/boost_1_75_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 task3_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_test">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/task3_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 task3_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_test/fast">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/task3_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 task3_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/include"/>
+					<Add directory="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/gtest_lib/googletest-master/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/src/gmock-all.cc">
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.cpp">
+			<Option target="task3"/>
+			<Option target="task3_lib"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.h">
+			<Option target="task3"/>
+			<Option target="task3_lib"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.cpp">
+			<Option target="task3"/>
+			<Option target="task3_lib"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.h">
+			<Option target="task3"/>
+			<Option target="task3_lib"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/main.cpp">
+			<Option target="task3"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/tests/main.cpp">
+			<Option target="task3_test"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/tests/tests.cpp">
+			<Option target="task3_test"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\gtest_lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

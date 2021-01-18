@@ -1,0 +1,12 @@
+{
+    "project_name": "task3",
+    "full_path": "/Users/mac/softserve/ss_tasks/task3",
+    "data": {
+        "number_of_files": "60",
+        "all_lines": "31202",
+        "blank_lines": "4302",
+        "comment_lines": "10204",
+        "code_lines": "18563",
+        "elapsed_time_ms": "7241"
+    }
+}
