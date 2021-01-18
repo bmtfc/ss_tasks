@@ -16,7 +16,7 @@ void ProjectAnalyzer::GenerateListOfFilePaths()
 
         if (check_extension(file.path().extension()))
         {
-            file_paths.push_back(file.path());
+            file_paths.push_back(file.path().string());
         }
     }
 }
@@ -42,7 +42,6 @@ void ProjectAnalyzer::AnalyzeProject()
     {
         boost::asio::post(pool, boost::bind(ProcessFile, file_path, std::ref(project_data),
                                             std::ref(number_of_files), std::ref(m)));
-        //ProcessFile(file_path, std::ref(project_data), std::ref(number_of_files), std::ref(m));
     }
 
     pool.join();
@@ -56,14 +55,14 @@ void ProjectAnalyzer::SetPath(const std::string &t_path)
 {
     path = t_path;
     std::filesystem::path fake_path(path);
-    project_name = fake_path.filename();
+    project_name = fake_path.filename().string();
 }
 
 void ProjectAnalyzer::CreateJson()
 {
     boost::property_tree::ptree pt;
     pt.put("project_name", project_name);
-    pt.put("full_path", path);
+    pt.put("full_path", path.data());
     pt.put("data.number_of_files", number_of_files);
     pt.put("data.all_lines", project_data.all_lines);
     pt.put("data.blank_lines", project_data.blank_lines);
@@ -74,7 +73,10 @@ void ProjectAnalyzer::CreateJson()
     std::stringstream ss;
     boost::property_tree::json_parser::write_json(ss, pt);
     std::ofstream file(project_name + ".json");
-    file << ss.str();
+    std::string data_json = ss.str();
+    //std::replace(data_json.begin(), data_json.end(),'\\',' ');
+    data_json.erase(std::remove(data_json.begin(), data_json.end(), '\\'), data_json.end());
+    file << data_json;
 }
 
 
