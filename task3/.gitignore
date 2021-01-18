@@ -11,3 +11,4 @@ CMakeLists.txt
 cmake-build-debug/
 politech.json
 .idea/
+.idea/codeStyles
