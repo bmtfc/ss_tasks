@@ -1,4 +1,4 @@
-#include "ProjectInfo.h"
+#include "ProjectAnalyzer.h"
 #include <thread>
 
 void AnalyzeProject(const std::string &path);
