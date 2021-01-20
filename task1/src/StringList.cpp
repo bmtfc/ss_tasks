@@ -26,23 +26,22 @@ int ReallocList(char ***list, size_t capacity_scale = 2);
 /* Swaps two elements of the list  */
 void Swap(char **list, size_t index1, size_t index2);
 
-/* IMPLEMENTATION */
-// TODO : fix exit(-1), replace with return + add messages about errors or NULL in ptr
 
 void StringListInit(char ***list)
 {
     *list = (char **) malloc(sizeof(char *));
     if (*list == nullptr)
     {
-        exit(-1);
+        printf("Unable to malloc the memory\n");
+        return;
     }
 
     (*list)[0] = (char *) malloc(sizeof(size_t) * 2);
     if (*list[0] == nullptr)
     {
-        exit(-1);
+        printf("Unable to malloc the memory\n");
+        return;
     }
-
     SetSize(*list, 1);
     SetCapacity(*list, 1);
 }
@@ -50,7 +49,7 @@ void StringListInit(char ***list)
 void StringListDestroy(char ***list)
 {
     char **temp_list = *list;
-    const auto size = GetSize(temp_list);
+    const size_t size = GetSize(temp_list);
 
     for (size_t i = 0; i < size; i++)
     {
@@ -68,32 +67,32 @@ void StringListAdd(char ***list, char *str)
 {
     if (ReallocList(list) == -1)
     {
-        exit(-1);
+        printf("Unable to increase list size\n");
+        return;
     }
 
     char **temp_list = *list;
-    const auto list_size = GetSize(temp_list);
+    const size_t list_size = GetSize(temp_list);
     temp_list[list_size] = (char *) malloc((strlen(str) + 1) * sizeof(char));
     strcpy(temp_list[list_size], str);
-
     SetSize(temp_list, list_size + 1);
 }
 
 void StringListSet(char **list, size_t i, char *str)
 {
-    const size_t actual_i = i + 1;
-    if (list[actual_i] != nullptr)
+    const size_t str_index = i + 1;
+    if (list[str_index] != nullptr)
     {
-        free(list[actual_i]);
+        free(list[str_index]);
     }
-    list[actual_i] = (char *) malloc((strlen(str) + 1) * sizeof(char));
-    strcpy(list[actual_i], str);
+    list[str_index] = (char *) malloc((strlen(str) + 1) * sizeof(char));
+    strcpy(list[str_index], str);
 }
 
 void StringListGet(char **list, size_t i, char **out)
 {
-    const size_t actual_i = i + 1;
-    *out = list[actual_i];
+    const size_t str_index = i + 1;
+    *out = list[str_index];
 }
 
 size_t StringListSize(char **list)
@@ -113,10 +112,9 @@ size_t StringListIndexOf(char **list, char *str)
     return -1;
 }
 
-//@TODO : copied, rewrite StringListRemove
 void StringListRemove(char **list, char *str)
 {
-    const auto list_size = GetSize(list);
+    const size_t list_size = GetSize(list);
     size_t removed_count = 0;
     ssize_t insert_index = -1;
 
@@ -142,13 +140,12 @@ void StringListRemove(char **list, char *str)
             }
         }
     }
-
     SetSize(list, list_size - removed_count);
 }
 
 void StringListSort(char **list)
 {
-    const auto list_size = GetSize(list);
+    const size_t list_size = GetSize(list);
     for (size_t i = 1; i < list_size; i++)
     {
         for (size_t j = 2; j < list_size; j++)
@@ -204,8 +201,8 @@ size_t GetCapacity(char **list)
 int ReallocList(char ***list, size_t capacity_scale)
 {
     char **temp_list = *list;
-    const auto list_size = GetSize(temp_list);
-    const auto list_capacity = GetCapacity(temp_list);
+    const size_t list_size = GetSize(temp_list);
+    const size_t list_capacity = GetCapacity(temp_list);
 
     if (list_size == list_capacity)
     {

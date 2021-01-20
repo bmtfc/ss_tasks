@@ -6,8 +6,8 @@
       <config projectName="task1" targetName="task1_lib" />
       <config projectName="task1" targetName="gmock_main" />
       <config projectName="task1" targetName="gmock" />
-      <config projectName="task1" targetName="gtest" />
       <config projectName="task1" targetName="task1_test" />
+      <config projectName="task1" targetName="gtest" />
       <config projectName="task1" targetName="task1" />
     </generated>
   </component>
@@ -20,12 +20,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4f7e9e5d-a4ef-404b-b5b9-bd2125c9a19a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringList.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringList.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task3/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task3/ProjectInfo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/ProjectInfo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task3/ProjectInfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/ProjectInfo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringList.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringList.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/cmake-build-debug-coverage/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/cmake-build-debug-coverage/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/tests/tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/tests/tests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Coverage" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -64,7 +63,7 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Google Test.task1_test">
+  <component name="RunManager" selected="CMake Application.task1">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -144,94 +143,15 @@
       <workItem from="1610718432608" duration="1415000" />
       <workItem from="1610885050137" duration="879000" />
       <workItem from="1610926801106" duration="12000" />
-      <workItem from="1610926917025" duration="382000" />
+      <workItem from="1610926917025" duration="1019000" />
+      <workItem from="1611010328206" duration="2299000" />
+      <workItem from="1611057954042" duration="460000" />
+      <workItem from="1611097495517" duration="6303000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="357" y="48" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1608850421963">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="357" y="48" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1440.900@0.0.1440.900" timestamp="1608850421963" />
-    <state x="467" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1608737243704">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="467" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1608737243704" />
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1608850928542">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1608850928542" />
-    <state width="1398" height="207" key="GridCell.Tab.0.bottom" timestamp="1610714400172">
-      <screen x="0" y="25" width="1440" height="824" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1609786073351" />
-    <state width="1398" height="207" key="GridCell.Tab.0.bottom/0.25.1440.824@0.25.1440.824" timestamp="1610714400172" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.25.1440.825@0.25.1440.825" timestamp="1610698865781" />
-    <state width="1398" height="207" key="GridCell.Tab.0.center" timestamp="1610714400170">
-      <screen x="0" y="25" width="1440" height="824" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1609786073350" />
-    <state width="1398" height="207" key="GridCell.Tab.0.center/0.25.1440.824@0.25.1440.824" timestamp="1610714400170" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center/0.25.1440.825@0.25.1440.825" timestamp="1610698865779" />
-    <state width="1398" height="207" key="GridCell.Tab.0.left" timestamp="1610714400160">
-      <screen x="0" y="25" width="1440" height="824" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1609786073348" />
-    <state width="1398" height="207" key="GridCell.Tab.0.left/0.25.1440.824@0.25.1440.824" timestamp="1610714400160" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left/0.25.1440.825@0.25.1440.825" timestamp="1610698865779" />
-    <state width="1398" height="207" key="GridCell.Tab.0.right" timestamp="1610714400172">
-      <screen x="0" y="25" width="1440" height="824" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1609786073350" />
-    <state width="1398" height="207" key="GridCell.Tab.0.right/0.25.1440.824@0.25.1440.824" timestamp="1610714400172" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right/0.25.1440.825@0.25.1440.825" timestamp="1610698865780" />
-    <state width="1398" height="259" key="GridCell.Tab.1.bottom" timestamp="1609871243424">
-      <screen x="0" y="25" width="1440" height="825" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1609786073352" />
-    <state width="1398" height="259" key="GridCell.Tab.1.bottom/0.25.1440.825@0.25.1440.825" timestamp="1609871243424" />
-    <state width="1398" height="259" key="GridCell.Tab.1.center" timestamp="1609871243424">
-      <screen x="0" y="25" width="1440" height="825" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1609786073352" />
-    <state width="1398" height="259" key="GridCell.Tab.1.center/0.25.1440.825@0.25.1440.825" timestamp="1609871243424" />
-    <state width="1398" height="259" key="GridCell.Tab.1.left" timestamp="1609871243423">
-      <screen x="0" y="25" width="1440" height="825" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1609786073351" />
-    <state width="1398" height="259" key="GridCell.Tab.1.left/0.25.1440.825@0.25.1440.825" timestamp="1609871243423" />
-    <state width="1398" height="259" key="GridCell.Tab.1.right" timestamp="1609871243424">
-      <screen x="0" y="25" width="1440" height="825" />
-    </state>
-    <state width="1398" height="301" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1609786073352" />
-    <state width="1398" height="259" key="GridCell.Tab.1.right/0.25.1440.825@0.25.1440.825" timestamp="1609871243424" />
-    <state x="308" y="189" key="IDE.errors.dialog" timestamp="1608850412674">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="308" y="189" key="IDE.errors.dialog/0.0.1440.900@0.0.1440.900" timestamp="1608850412674" />
-    <state x="118" y="86" width="1093" height="728" key="SettingsEditor" timestamp="1608850662492">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="118" y="86" width="1093" height="728" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1608850662492" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1609781706497">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1609781706497" />
-    <state x="504" y="245" key="refactoring.ChangeSignatureDialog" timestamp="1608681883841">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="504" y="245" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1608681883841" />
-    <state x="385" y="210" key="run.anything.popup" timestamp="1608851084869">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1608851084869" />
-    <state x="385" y="174" width="670" height="676" key="search.everywhere.popup" timestamp="1610695542454">
-      <screen x="0" y="25" width="1440" height="825" />
-    </state>
-    <state x="385" y="174" width="670" height="676" key="search.everywhere.popup/0.25.1440.825@0.25.1440.825" timestamp="1610695542454" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../../softserve/ss_tasks/task1/cmake-build-debug-coverage" NAME="task1_test Coverage Results" MODIFIED="1610927300670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

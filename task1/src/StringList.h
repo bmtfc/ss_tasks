@@ -1,5 +1,5 @@
-#ifndef TASK1_STRINGLIST_H
-#define TASK1_STRINGLIST_H
+#ifndef TASK1_SRC_STRINGLIST_H
+#define TASK1_SRC_STRINGLIST_H
 
 #include <stdio.h>
 #include <string.h>
@@ -37,4 +37,4 @@ void StringListSort(char **list);
 void StringListPrint(char **list);
 
 
-#endif //TASK1_STRINGLIST_H
+#endif //TASK1_SRC_STRINGLIST_H
