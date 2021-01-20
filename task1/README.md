@@ -1,4 +1,4 @@
-# Implement a dynamically sized list of c-strings (T1)
+# Task1 : Implement a dynamically sized list of c-strings 
 
 Requirements:
 1) Only stdlib.h and string.h headers can be used in file where the list is implemented.
