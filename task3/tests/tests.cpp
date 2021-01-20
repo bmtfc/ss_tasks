@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include "/Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.h"
-#include "/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.h"
+#include "/Users/mac/softserve/ss_tasks/task3/src/FileAnalyser.h"
+#include "/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyser.h"
 
 TEST(file_analyzer, oper_add)
 {
@@ -15,7 +15,7 @@ TEST(file_analyzer, oper_add)
 
 TEST(file_analyzer, analyze_file)
 {
-    const auto temp = FileAnalyzer::AnalyzeFile("/Users/mac/softserve/ss_tasks/task3/tests/FOR_TESTING.h");
+    const auto temp = FileAnalyser::AnalyzeFile("/Users/mac/softserve/ss_tasks/task3/tests/FOR_TESTING.h");
     ASSERT_EQ(7, temp.code_lines);
     ASSERT_EQ(6, temp.comment_lines);
     ASSERT_EQ(4, temp.blank_lines);

@@ -1,5 +1,5 @@
-#ifndef TASK3_PROJECTANALYZER_H
-#define TASK3_PROJECTANALYZER_H
+#ifndef TASK3_PROJECTANALYSER_H
+#define TASK3_PROJECTANALYSER_H
 
 #include <iostream>
 #include <vector>
@@ -12,17 +12,15 @@
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <boost/thread/thread.hpp>
-#include "FileAnalyzer.h"
+#include "FileAnalyser.h"
 
 
 //class to analyze project
-//use method SetPath() than AnalyzeProject()
-//get results with CreateJson() and/or PrintInfo()
-class ProjectAnalyzer
+class ProjectAnalyser
 {
 public:
 
-    ProjectAnalyzer() = default;
+    ProjectAnalyser() = default;
 
     //set path to the project folder
     void SetPath(const std::string &t_path);
@@ -41,16 +39,16 @@ public:
 
 private:
 
+    void GenerateListOfFilePaths();
+
+    static void ProcessFile(const std::string &file_path, FileData &curr, int &file_count, std::mutex &f_mutex);
+
     int number_of_files{0};
     FileData project_data;
     int elapsed_time_ms{0};
     std::string path;
     std::string project_name;
     std::vector<std::string> file_paths;
-
-    void GenerateListOfFilePaths();
-
-    static void ProcessFile(const std::string &file_path, FileData &curr, int &file_count, std::mutex &f_mutex);
 };
 
-#endif //TASK3_PROJECTANALYZER_H
+#endif //TASK3_PROJECTANALYSER_H

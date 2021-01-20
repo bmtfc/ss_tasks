@@ -2,7 +2,7 @@
 // Created by Mac on 18.01.2021.
 //
 
-#include "FileAnalyzer.h"
+#include "FileAnalyser.h"
 
 FileData &FileData::operator+=(const FileData &r)
 {
@@ -14,7 +14,7 @@ FileData &FileData::operator+=(const FileData &r)
 }
 
 
-FileData FileAnalyzer::AnalyzeFile(const std::string &file_path)
+FileData FileAnalyser::AnalyzeFile(const std::string &file_path)
 {
     FileData curr;
     std::fstream file;
@@ -27,19 +27,19 @@ FileData FileAnalyzer::AnalyzeFile(const std::string &file_path)
     std::regex rgx_code_before_begin_multiline_comment(R"(((\w|\s|[;,.=()])+(\/\*)(\w|\s|[;,.=()])+))");
     std::regex rgx_code_after_end_multiline_comment(R"(((\w|\s|[;,.=()])+(\*\/)(\w|\s|[;,.=()])+))");
 
-    bool isBlockCommentLine = false;
+    bool MultiLineComment = false;
     while (std::getline(file, to_analyze))
     {
-        if (isBlockCommentLine)
+        if (MultiLineComment)
         {
-            if (std::regex_search(to_analyze, std::regex(R"((\*\/))"))) // end of block comment
+            if (std::regex_search(to_analyze, std::regex(R"((\*\/))"))) // end of multiline comment
             {
                 curr.comment_lines++;
                 if (std::regex_match(to_analyze, rgx_code_after_end_multiline_comment))
                 {
                     curr.code_lines++;
                 }
-                isBlockCommentLine = false;
+                MultiLineComment = false;
             }
             else
             {
@@ -59,7 +59,7 @@ FileData FileAnalyzer::AnalyzeFile(const std::string &file_path)
                 curr.code_lines++;
             }
         }
-        else if (std::regex_search(to_analyze, std::regex(R"((\/\*))"))) // start of block comment
+        else if (std::regex_search(to_analyze, std::regex(R"((\/\*))"))) // begin of multiline comment
         {
             curr.comment_lines++;
             if (std::regex_match(to_analyze, rgx_code_before_begin_multiline_comment))
@@ -68,7 +68,7 @@ FileData FileAnalyzer::AnalyzeFile(const std::string &file_path)
             }
             if (!std::regex_search(to_analyze, std::regex(R"((\*\/))")))
             {
-                isBlockCommentLine = true;
+                MultiLineComment = true;
             }
         }
         else
@@ -77,8 +77,6 @@ FileData FileAnalyzer::AnalyzeFile(const std::string &file_path)
         }
         curr.all_lines++;
     }
-
     file.close();
     return curr;
 }
-

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o"
-  "CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o"
+  "CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o"
+  "CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o"
   "libtask3_lib.a"
   "libtask3_lib.pdb"
 )

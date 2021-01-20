@@ -426,19 +426,19 @@
 		<Unit filename="/Users/mac/softserve/ss_tasks/task3/gtest_lib/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.cpp">
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/FileAnalyser.cpp">
 			<Option target="task3"/>
 			<Option target="task3_lib"/>
 		</Unit>
-		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.h">
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/FileAnalyser.h">
 			<Option target="task3"/>
 			<Option target="task3_lib"/>
 		</Unit>
-		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.cpp">
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyser.cpp">
 			<Option target="task3"/>
 			<Option target="task3_lib"/>
 		</Unit>
-		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.h">
+		<Unit filename="/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyser.h">
 			<Option target="task3"/>
 			<Option target="task3_lib"/>
 		</Unit>

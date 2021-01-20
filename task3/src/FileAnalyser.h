@@ -1,5 +1,5 @@
-#ifndef TASK3_FILEANALYZER_H
-#define TASK3_FILEANALYZER_H
+#ifndef TASK3_FILEANALYSER_H
+#define TASK3_FILEANALYSER_H
 
 #include <string>
 #include <fstream>
@@ -16,11 +16,11 @@ struct FileData
     FileData &operator+=(const FileData &r);
 };
 //class to analyze file
-class FileAnalyzer
+class FileAnalyser
 {
 public:
     static FileData AnalyzeFile(const std::string &file_path);
 };
 
 
-#endif //TASK3_FILEANALYZER_H
+#endif //TASK3_FILEANALYSER_H

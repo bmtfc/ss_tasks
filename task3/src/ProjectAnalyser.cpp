@@ -1,13 +1,13 @@
-#include "ProjectAnalyzer.h"
+#include "ProjectAnalyser.h"
 
-void ProjectAnalyzer::SetPath(const std::string &t_path)
+void ProjectAnalyser::SetPath(const std::string &t_path)
 {
     path = t_path;
     std::filesystem::path fake_path(path);
     project_name = fake_path.filename().string();
 }
 
-void ProjectAnalyzer::AnalyzeProject()
+void ProjectAnalyser::AnalyzeProject()
 {
     this->GenerateListOfFilePaths();
 
@@ -25,7 +25,7 @@ void ProjectAnalyzer::AnalyzeProject()
     elapsed_time_ms = std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() / (1000);
 }
 
-void ProjectAnalyzer::CreateJson()
+void ProjectAnalyser::CreateJson()
 {
     boost::property_tree::ptree pt;
     pt.put("project_name", project_name);
@@ -45,7 +45,7 @@ void ProjectAnalyzer::CreateJson()
     file << data_json;
 }
 
-void ProjectAnalyzer::PrintInfo()
+void ProjectAnalyser::PrintInfo()
 {
     std::cout << "Project \"" << project_name << "\" : \n";
     std::cout << "\tpath : \"" << path << "\"\n";
@@ -57,7 +57,7 @@ void ProjectAnalyzer::PrintInfo()
     std::cout << "\telapsed time : " << elapsed_time_ms << " ms \n";
 }
 
-void ProjectAnalyzer::PrintFilePaths()
+void ProjectAnalyser::PrintFilePaths()
 {
     for (auto &el : file_paths)
     {
@@ -70,7 +70,7 @@ bool check_extension(const std::string &str)
     return str == ".h" || str == ".hpp" || str == ".c" || str == ".cpp";
 }
 
-void ProjectAnalyzer::GenerateListOfFilePaths()
+void ProjectAnalyser::GenerateListOfFilePaths()
 {
     for (const auto &file : std::filesystem::recursive_directory_iterator(path))
     {
@@ -82,9 +82,9 @@ void ProjectAnalyzer::GenerateListOfFilePaths()
     }
 }
 
-void ProjectAnalyzer::ProcessFile(const std::string &file_path, FileData &curr, int &file_count, std::mutex &f_mutex)
+void ProjectAnalyser::ProcessFile(const std::string &file_path, FileData &curr, int &file_count, std::mutex &f_mutex)
 {
-    FileData temp = FileAnalyzer::AnalyzeFile(file_path);
+    FileData temp = FileAnalyser::AnalyzeFile(file_path);
     f_mutex.lock();
     file_count++;
     curr += temp;

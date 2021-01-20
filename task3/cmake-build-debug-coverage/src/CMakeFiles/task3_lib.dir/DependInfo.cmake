@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.cpp" "/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o"
-  "/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.cpp" "/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o"
+  "/Users/mac/softserve/ss_tasks/task3/src/FileAnalyser.cpp" "/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o"
+  "/Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyser.cpp" "/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

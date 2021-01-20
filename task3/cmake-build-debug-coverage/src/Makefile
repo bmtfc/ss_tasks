@@ -206,65 +206,65 @@ task3_lib/fast:
 	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/build
 .PHONY : task3_lib/fast
 
-FileAnalyzer.o: FileAnalyzer.cpp.o
+FileAnalyser.o: FileAnalyser.cpp.o
 
-.PHONY : FileAnalyzer.o
-
-# target to build an object file
-FileAnalyzer.cpp.o:
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/FileAnalyzer.cpp.o
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o
-.PHONY : FileAnalyzer.cpp.o
-
-FileAnalyzer.i: FileAnalyzer.cpp.i
-
-.PHONY : FileAnalyzer.i
-
-# target to preprocess a source file
-FileAnalyzer.cpp.i:
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/FileAnalyzer.cpp.i
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.i
-.PHONY : FileAnalyzer.cpp.i
-
-FileAnalyzer.s: FileAnalyzer.cpp.s
-
-.PHONY : FileAnalyzer.s
-
-# target to generate assembly for a file
-FileAnalyzer.cpp.s:
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/FileAnalyzer.cpp.s
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.s
-.PHONY : FileAnalyzer.cpp.s
-
-ProjectAnalyzer.o: ProjectAnalyzer.cpp.o
-
-.PHONY : ProjectAnalyzer.o
+.PHONY : FileAnalyser.o
 
 # target to build an object file
-ProjectAnalyzer.cpp.o:
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/ProjectAnalyzer.cpp.o
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o
-.PHONY : ProjectAnalyzer.cpp.o
+FileAnalyser.cpp.o:
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/FileAnalyser.cpp.o
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o
+.PHONY : FileAnalyser.cpp.o
 
-ProjectAnalyzer.i: ProjectAnalyzer.cpp.i
+FileAnalyser.i: FileAnalyser.cpp.i
 
-.PHONY : ProjectAnalyzer.i
+.PHONY : FileAnalyser.i
 
 # target to preprocess a source file
-ProjectAnalyzer.cpp.i:
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/ProjectAnalyzer.cpp.i
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.i
-.PHONY : ProjectAnalyzer.cpp.i
+FileAnalyser.cpp.i:
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/FileAnalyser.cpp.i
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.i
+.PHONY : FileAnalyser.cpp.i
 
-ProjectAnalyzer.s: ProjectAnalyzer.cpp.s
+FileAnalyser.s: FileAnalyser.cpp.s
 
-.PHONY : ProjectAnalyzer.s
+.PHONY : FileAnalyser.s
 
 # target to generate assembly for a file
-ProjectAnalyzer.cpp.s:
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/ProjectAnalyzer.cpp.s
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.s
-.PHONY : ProjectAnalyzer.cpp.s
+FileAnalyser.cpp.s:
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/FileAnalyser.cpp.s
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.s
+.PHONY : FileAnalyser.cpp.s
+
+ProjectAnalyser.o: ProjectAnalyser.cpp.o
+
+.PHONY : ProjectAnalyser.o
+
+# target to build an object file
+ProjectAnalyser.cpp.o:
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/ProjectAnalyser.cpp.o
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o
+.PHONY : ProjectAnalyser.cpp.o
+
+ProjectAnalyser.i: ProjectAnalyser.cpp.i
+
+.PHONY : ProjectAnalyser.i
+
+# target to preprocess a source file
+ProjectAnalyser.cpp.i:
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/ProjectAnalyser.cpp.i
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.i
+.PHONY : ProjectAnalyser.cpp.i
+
+ProjectAnalyser.s: ProjectAnalyser.cpp.s
+
+.PHONY : ProjectAnalyser.s
+
+# target to generate assembly for a file
+ProjectAnalyser.cpp.s:
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3.dir/build.make src/CMakeFiles/task3.dir/ProjectAnalyser.cpp.s
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/task3_lib.dir/build.make src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.s
+.PHONY : ProjectAnalyser.cpp.s
 
 main.o: main.cpp.o
 
@@ -307,12 +307,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... task3"
 	@echo "... task3_lib"
-	@echo "... FileAnalyzer.o"
-	@echo "... FileAnalyzer.i"
-	@echo "... FileAnalyzer.s"
-	@echo "... ProjectAnalyzer.o"
-	@echo "... ProjectAnalyzer.i"
-	@echo "... ProjectAnalyzer.s"
+	@echo "... FileAnalyser.o"
+	@echo "... FileAnalyser.i"
+	@echo "... FileAnalyser.s"
+	@echo "... ProjectAnalyser.o"
+	@echo "... ProjectAnalyser.i"
+	@echo "... ProjectAnalyser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

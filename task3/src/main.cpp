@@ -1,4 +1,4 @@
-#include "ProjectAnalyzer.h"
+#include "ProjectAnalyser.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,10 +19,10 @@ int main(int argc, char *argv[])
     {
         project_path.erase(project_path.end() - 1);
     }
-    ProjectAnalyzer Analyzer;
-    Analyzer.SetPath(project_path);
-    Analyzer.AnalyzeProject();
-    Analyzer.PrintInfo();
-    Analyzer.CreateJson();
+    ProjectAnalyser Analyser;
+    Analyser.SetPath(project_path);
+    Analyser.AnalyzeProject();
+    Analyser.PrintInfo();
+    Analyser.CreateJson();
     return 0;
 }

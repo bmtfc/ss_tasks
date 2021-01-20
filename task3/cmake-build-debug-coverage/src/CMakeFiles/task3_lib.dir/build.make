@@ -77,42 +77,42 @@ include src/CMakeFiles/task3_lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/task3_lib.dir/flags.make
 
-src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o: src/CMakeFiles/task3_lib.dir/flags.make
-src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o: ../src/ProjectAnalyzer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o"
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o -c /Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.cpp
+src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o: src/CMakeFiles/task3_lib.dir/flags.make
+src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o: ../src/ProjectAnalyser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o"
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o -c /Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyser.cpp
 
-src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.i"
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.cpp > CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.i
+src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.i"
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyser.cpp > CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.i
 
-src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.s"
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyzer.cpp -o CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.s
+src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.s"
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/softserve/ss_tasks/task3/src/ProjectAnalyser.cpp -o CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.s
 
-src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o: src/CMakeFiles/task3_lib.dir/flags.make
-src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o: ../src/FileAnalyzer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o"
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o -c /Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.cpp
+src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o: src/CMakeFiles/task3_lib.dir/flags.make
+src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o: ../src/FileAnalyser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o"
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o -c /Users/mac/softserve/ss_tasks/task3/src/FileAnalyser.cpp
 
-src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.i"
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.cpp > CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.i
+src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task3_lib.dir/FileAnalyser.cpp.i"
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/softserve/ss_tasks/task3/src/FileAnalyser.cpp > CMakeFiles/task3_lib.dir/FileAnalyser.cpp.i
 
-src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.s"
-	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/softserve/ss_tasks/task3/src/FileAnalyzer.cpp -o CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.s
+src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task3_lib.dir/FileAnalyser.cpp.s"
+	cd /Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/softserve/ss_tasks/task3/src/FileAnalyser.cpp -o CMakeFiles/task3_lib.dir/FileAnalyser.cpp.s
 
 # Object files for target task3_lib
 task3_lib_OBJECTS = \
-"CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o" \
-"CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o"
+"CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o" \
+"CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o"
 
 # External object files for target task3_lib
 task3_lib_EXTERNAL_OBJECTS =
 
-src/libtask3_lib.a: src/CMakeFiles/task3_lib.dir/ProjectAnalyzer.cpp.o
-src/libtask3_lib.a: src/CMakeFiles/task3_lib.dir/FileAnalyzer.cpp.o
+src/libtask3_lib.a: src/CMakeFiles/task3_lib.dir/ProjectAnalyser.cpp.o
+src/libtask3_lib.a: src/CMakeFiles/task3_lib.dir/FileAnalyser.cpp.o
 src/libtask3_lib.a: src/CMakeFiles/task3_lib.dir/build.make
 src/libtask3_lib.a: src/CMakeFiles/task3_lib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mac/softserve/ss_tasks/task3/cmake-build-debug-coverage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtask3_lib.a"
