@@ -16,7 +16,7 @@ void StringListDestroy(char ***list);
 void StringListSet(char **list, size_t i, char *str);
 
 /* Returns i-th element of the list */
-void StringListGet(char **list, size_t i, char **out);
+char *StringListGet(char **list, size_t i);
 
 /* Inserts value at the end of the list. */
 void StringListAdd(char ***list, char *str);

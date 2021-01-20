@@ -80,7 +80,7 @@ void StringListAdd(char ***list, char *str)
 
 void StringListSet(char **list, size_t i, char *str)
 {
-    const size_t str_index = i + 1;
+    const size_t str_index = i;
     if (list[str_index] != nullptr)
     {
         free(list[str_index]);
@@ -89,10 +89,9 @@ void StringListSet(char **list, size_t i, char *str)
     strcpy(list[str_index], str);
 }
 
-void StringListGet(char **list, size_t i, char **out)
+char *StringListGet(char **list, size_t i)
 {
-    const size_t str_index = i + 1;
-    *out = list[str_index];
+    return list[i];
 }
 
 size_t StringListSize(char **list)
@@ -106,7 +105,7 @@ size_t StringListIndexOf(char **list, char *str)
     {
         if (strcmp(list[i], str) == 0)
         {
-            return i - 1;
+            return i;
         }
     }
     return -1;
