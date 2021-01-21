@@ -25,19 +25,19 @@ int main()
 void BlockOutput()
 {
     cout << "Press any key : \n";
-    cin.get();
-    cin.get();
+    getchar();
+    getchar();
 }
 
 void PrintMenuOptions()
 {
-    cout << "1. Add string\n"
-         << "2. Delete string\n"
+    cout << "1. Add  string\n"
+         << "2. Delete string by content\n"
          << "3. Index of string\n"
          << "4. Print list\n"
          << "5. Print list size\n"
          << "6. Sort list\n"
-         << "7. Clear list\n"
+         << "7. Clear list (Destroy this list and init an empty list)\n"
          << "8. Add string examples\n"
          << "0. Exit\n";
 }
@@ -122,7 +122,7 @@ int PrintMenu(char **list)
             }
             case 8:
             {
-                StringListAdd(&list, "Lorem ipsum dolor sit amet");
+                StringListAdd(&list, "lorem ipsum dolor sit amet");
                 StringListAdd(&list, "consectetur adipiscing elit");
                 StringListAdd(&list, "sed do eiusmod tempor incididunt ut");
                 StringListAdd(&list, "labore et dolore magna aliqua");
@@ -132,13 +132,7 @@ int PrintMenu(char **list)
             case 0:
             {
                 return 0;
-                break;
             }
-        }
-
-        if (i == 0)
-        {
-            break;
         }
     }
     return 0;

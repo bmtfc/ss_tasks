@@ -1,9 +1,9 @@
 #ifndef TASK1_SRC_STRINGLIST_H
 #define TASK1_SRC_STRINGLIST_H
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
 
 
 /* Initializes list */

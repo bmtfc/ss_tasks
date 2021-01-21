@@ -2,28 +2,20 @@
 
 /* PRIVATE METHODS */
 
-/* Writes num as sizeof(size_t) bytes into out starting from index */
-void ToBytes(size_t num, char *out, size_t index);
+void ToBytes(size_t a, char *out, size_t index);
 
-/* Returns sizeof(size_t) bytes of arr starting from index as size_t */
 size_t ToInt(char *arr, size_t index);
 
-/* Stores list size in first sizeof(size_t) bytes of list[0] */
 void SetSize(char **list, size_t size);
 
-/* Stores list buffer size in second half of list[0]. */
 void SetCapacity(char **list, size_t size);
 
-/* Returns  number of elements in the list. */
 size_t GetSize(char **list);
 
-/* Returns buffer size of the list. */
 size_t GetCapacity(char **list);
 
-/* Reallocating list memory by capacity_scale if list size equals to list capacity. */
 int ReallocList(char ***list, size_t capacity_scale = 2);
 
-/* Swaps two elements of the list  */
 void Swap(char **list, size_t index1, size_t index2);
 
 
@@ -32,14 +24,14 @@ void StringListInit(char ***list)
     *list = (char **) malloc(sizeof(char *));
     if (*list == nullptr)
     {
-        printf("Unable to malloc the memory\n");
+        printf("Unable to allocate the memory\n");
         return;
     }
 
     (*list)[0] = (char *) malloc(sizeof(size_t) * 2);
     if (*list[0] == nullptr)
     {
-        printf("Unable to malloc the memory\n");
+        printf("Unable to allocate the memory\n");
         return;
     }
     SetSize(*list, 1);
@@ -166,17 +158,6 @@ void StringListPrint(char **list)
     printf("\n");
 }
 
-void ToBytes(size_t a, char *out, size_t index)
-{
-    out = out + index;
-    *reinterpret_cast<size_t *>(out) = a;
-}
-
-size_t ToInt(char *arr, size_t index)
-{
-    return *reinterpret_cast<size_t *>(arr + index);
-}
-
 void SetSize(char **list, size_t size)
 {
     ToBytes(size, list[0], 0);
@@ -195,6 +176,17 @@ size_t GetSize(char **list)
 size_t GetCapacity(char **list)
 {
     return ToInt(list[0], sizeof(size_t));
+}
+
+void ToBytes(size_t a, char *out, size_t index)
+{
+    out = out + index;
+    *reinterpret_cast<size_t *>(out) = a;
+}
+
+size_t ToInt(char *arr, size_t index)
+{
+    return *reinterpret_cast<size_t *>(arr + index);
 }
 
 int ReallocList(char ***list, size_t capacity_scale)
