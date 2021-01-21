@@ -2,8 +2,6 @@
 #define TASK3_FILEANALYSER_H
 
 #include <string>
-#include <fstream>
-#include <regex>
 
 //struct to contain data about files
 struct FileData

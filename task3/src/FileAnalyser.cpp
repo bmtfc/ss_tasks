@@ -1,6 +1,5 @@
-//
-// Created by Mac on 18.01.2021.
-//
+#include <fstream>
+#include <regex>
 
 #include "FileAnalyser.h"
 
@@ -23,6 +22,8 @@ FileData FileAnalyser::AnalyzeFile(const std::string &file_path)
 
     std::regex rgx_blank("");
     std::regex rgx_line_comment(R"(\/\/)");
+    std::regex rgx_begin_multiline_comment(R"((\/\*))");
+    std::regex rgx_end_multiline_comment(R"((\*\/))");
     std::regex rgx_code_before_line_comment(R"(((\w|\s|[;,.=()])+\/\/(\w|\s|[;,.=()])*))");
     std::regex rgx_code_before_begin_multiline_comment(R"(((\w|\s|[;,.=()])+(\/\*)(\w|\s|[;,.=()])+))");
     std::regex rgx_code_after_end_multiline_comment(R"(((\w|\s|[;,.=()])+(\*\/)(\w|\s|[;,.=()])+))");
@@ -32,7 +33,7 @@ FileData FileAnalyser::AnalyzeFile(const std::string &file_path)
     {
         if (MultiLineComment)
         {
-            if (std::regex_search(to_analyze, std::regex(R"((\*\/))"))) // end of multiline comment
+            if (std::regex_search(to_analyze, rgx_end_multiline_comment))
             {
                 curr.comment_lines++;
                 if (std::regex_match(to_analyze, rgx_code_after_end_multiline_comment))
@@ -41,7 +42,7 @@ FileData FileAnalyser::AnalyzeFile(const std::string &file_path)
                 }
                 MultiLineComment = false;
             }
-            else
+                    else
             {
                 curr.comment_lines++;
             }
@@ -59,19 +60,19 @@ FileData FileAnalyser::AnalyzeFile(const std::string &file_path)
                 curr.code_lines++;
             }
         }
-        else if (std::regex_search(to_analyze, std::regex(R"((\/\*))"))) // begin of multiline comment
+        else if (std::regex_search(to_analyze, rgx_begin_multiline_comment))
         {
             curr.comment_lines++;
             if (std::regex_match(to_analyze, rgx_code_before_begin_multiline_comment))
             {
                 curr.code_lines++;
             }
-            if (!std::regex_search(to_analyze, std::regex(R"((\*\/))")))
+            if (!std::regex_search(to_analyze, rgx_end_multiline_comment))
             {
                 MultiLineComment = true;
             }
         }
-        else
+                else
         {
             curr.code_lines++;
         }

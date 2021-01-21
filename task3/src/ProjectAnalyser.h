@@ -3,17 +3,8 @@
 
 #include <iostream>
 #include <vector>
-#include <cctype>
-#include <filesystem>
-#include <chrono>
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/json_parser.hpp>
-#include <boost/optional.hpp>
-#include <boost/asio.hpp>
-#include <boost/bind.hpp>
-#include <boost/thread/thread.hpp>
-#include "FileAnalyser.h"
 
+#include "FileAnalyser.h"
 
 //class to analyze project
 class ProjectAnalyser

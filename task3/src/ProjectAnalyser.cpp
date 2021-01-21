@@ -1,3 +1,10 @@
+#include <filesystem>
+#include <chrono>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
+#include <boost/asio.hpp>
+#include <boost/bind.hpp>
+
 #include "ProjectAnalyser.h"
 
 void ProjectAnalyser::SetPath(const std::string &t_path)
@@ -36,7 +43,6 @@ void ProjectAnalyser::CreateJson()
     pt.put("data.comment_lines", project_data.comment_lines);
     pt.put("data.code_lines", project_data.code_lines);
     pt.put("data.elapsed_time_ms", elapsed_time_ms);
-
     std::stringstream ss;
     boost::property_tree::json_parser::write_json(ss, pt);
     std::ofstream file(project_name + ".json");
