@@ -5,8 +5,8 @@
 #include "AnyType.h"
 
 const int NUMBER_OF_DATA_TYPES = 9;
-const std::string DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "unsigned int", "long int", "float",
-                                                         "double", "long double", "char", "none"};
+const char *DATA_TYPES_NAMES[NUMBER_OF_DATA_TYPES]{"bool", "int", "unsigned int", "long int", "float",
+                                                   "double", "long double", "char", "none"};
 
 AnyType::AnyType(bool data)
 {
@@ -108,68 +108,52 @@ void AnyType::SetValue(long double data)
 
 bool AnyType::ToBool()
 {
-    if (CheckData(data_type, BOOL))
-    {
-        return bool_data;
-    }
+    CheckData(BOOL);
+    return bool_data;
 }
 
 
 int AnyType::ToInt()
 {
-    if (CheckData(data_type, INT))
-    {
-        return int_data;
-    }
+    CheckData(INT);
+    return int_data;
 }
 
 double AnyType::ToDouble()
 {
-    if (CheckData(data_type, DOUBLE))
-    {
-        return double_data;
-    }
+    CheckData(DOUBLE);
+    return double_data;
 }
 
 char AnyType::ToChar()
 {
-    if (CheckData(data_type, CHAR))
-    {
-        return char_data;
-    }
+    CheckData(CHAR);
+    return char_data;
 }
 
 
 unsigned int AnyType::ToUnsignedInt()
 {
-    if (CheckData(data_type, UNSIGNED_INT))
-    {
-        return unsigned_int_data;
-    }
+    CheckData(UNSIGNED_INT);
+    return unsigned_int_data;
 }
 
 long int AnyType::ToLongInt()
 {
-    if (CheckData(data_type, LONG_INT))
-    {
-        return long_int_data;
-    }
+    CheckData(LONG_INT);
+    return long_int_data;
 }
 
 float AnyType::ToFloat()
 {
-    if (CheckData(data_type, FLOAT))
-    {
-        return float_data;
-    }
+    CheckData(FLOAT);
+    return float_data;
 }
 
 long double AnyType::ToLongDouble()
 {
-    if (CheckData(data_type, LONG_DOUBLE))
-    {
-        return long_double_data;
-    }
+    CheckData(LONG_DOUBLE);
+    return long_double_data;
 }
 
 void AnyType::Destroy()
@@ -186,7 +170,7 @@ void AnyType::SwapWith(AnyType &other)
 
 const char *AnyType::GetType()
 {
-    return DATA_TYPES_NAMES[data_type].data();
+    return DATA_TYPES_NAMES[data_type];
 }
 
 AnyType &AnyType::operator=(const bool data)
@@ -246,82 +230,79 @@ AnyType &AnyType::operator=(long double data)
 }
 
 
-
-bool AnyType::CheckData(AnyType::DATA_TYPES curr, AnyType::DATA_TYPES expected)
+void AnyType::CheckData(AnyType::DATA_TYPES expected)
 {
+    if (data_type == NONE)
+    {
+        throw AnyTypeException();
+    }
     switch (expected)
     {
         case BOOL:
         {
-            if (curr != BOOL)
+            if (data_type != BOOL)
             {
                 throw AnyTypeExceptionBool();
             }
-            return true;
             break;
         }
         case INT:
         {
-            if (curr != INT)
+            if (data_type != INT)
             {
                 throw AnyTypeExceptionInt();
             }
-            return true;
             break;
         }
         case UNSIGNED_INT:
         {
-            if (curr != UNSIGNED_INT)
+            if (data_type != UNSIGNED_INT)
             {
                 throw AnyTypeExceptionUnsignedInt();
             }
-            return true;
             break;
         }
         case LONG_INT:
         {
-            if (curr != LONG_INT)
+            if (data_type != LONG_INT)
             {
                 throw AnyTypeExceptionLongInt();
             }
-            return true;
             break;
+
         }
         case FLOAT:
         {
-            if (curr != FLOAT)
+            if (data_type != FLOAT)
             {
                 throw AnyTypeExceptionFloat();
             }
-            return true;
             break;
         }
         case DOUBLE:
         {
-            if (curr != DOUBLE)
+            if (data_type != DOUBLE)
             {
                 throw AnyTypeExceptionDouble();
             }
-            return true;
             break;
         }
         case LONG_DOUBLE:
         {
-            if (curr != LONG_DOUBLE)
+            if (data_type != LONG_DOUBLE)
             {
                 throw AnyTypeExceptionLongDouble();
             }
-            return true;
             break;
         }
         case CHAR:
         {
-            if (curr != CHAR)
+            if (data_type != CHAR)
             {
                 throw AnyTypeExceptionChar();
             }
-            return true;
             break;
+
         }
         default:
         {

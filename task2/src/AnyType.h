@@ -47,7 +47,7 @@ public:
     void SetValue(char data);
 
 
-    // return data, may throw AnyTypeException
+    // return data, throw AnyTypeException in case of wrong type
     bool ToBool();
 
     int ToInt();
@@ -69,7 +69,7 @@ public:
 
     void SwapWith(AnyType &other);
 
-    //return name type of variable in class
+    //return name of the type of variable in class
     const char *GetType();
 
     AnyType &operator=(bool data);
@@ -108,7 +108,7 @@ private :
         BOOL, INT, UNSIGNED_INT, LONG_INT, FLOAT, DOUBLE, LONG_DOUBLE, CHAR, NONE
     } data_type;
 
-    static bool CheckData(DATA_TYPES curr, DATA_TYPES expected);
+    void CheckData(DATA_TYPES expected);
 
 };
 
