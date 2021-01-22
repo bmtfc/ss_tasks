@@ -2,10 +2,6 @@
 
 /* PRIVATE METHODS */
 
-void ToBytes(size_t a, char *out, size_t index);
-
-size_t ToInt(char *arr, size_t index);
-
 void SetSize(char **list, size_t size);
 
 void SetCapacity(char **list, size_t size);
@@ -13,6 +9,10 @@ void SetCapacity(char **list, size_t size);
 size_t GetSize(char **list);
 
 size_t GetCapacity(char **list);
+
+void ToBytes(size_t a, char *out, size_t index);
+
+size_t ToInt(char *arr, size_t index);
 
 int ReallocList(char ***list, size_t capacity_scale = 2);
 

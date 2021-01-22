@@ -20,10 +20,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f7e9e5d-a4ef-404b-b5b9-bd2125c9a19a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringList.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task2/src/AnyType.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../task2/src/AnyType.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task2/src/AnyType.h" beforeDir="false" afterPath="$PROJECT_DIR$/../task2/src/AnyType.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/src/ProjectAnalyser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/src/ProjectAnalyser.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +33,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/StringList.cpp" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1m27LTPibLkgTRRWKMVqDGO9L2h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -137,6 +138,8 @@
       <workItem from="1611057954042" duration="460000" />
       <workItem from="1611097495517" duration="8527000" />
       <workItem from="1611128561599" duration="5380000" />
+      <workItem from="1611247863363" duration="383000" />
+      <workItem from="1611308983618" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="added readme">
       <created>1611124978387</created>
